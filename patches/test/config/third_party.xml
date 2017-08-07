@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!--
+	http://open.weibo.com/webmaster/info/basic?siteid=3584601777
+	-->
+	<!-- 品高云在线在新浪微博的AppID -->
+	<entry key="client_ID">3584601777</entry>
+	<!-- 品高云在线在新浪微博的App密码 -->
+	<entry key="client_SERCRET">00f95abbb0389ebe4fc0743a3555307a</entry>
+	
+	<!-- 新浪微博服务调用基地 -->
+	<entry key="baseURL">https://api.weibo.com/2/</entry>
+	<!-- 请求授权的URL地址 -->
+	<entry key="authorizeURL">https://api.weibo.com/oauth2/authorize</entry>
+	<!-- 获取访问令牌的URL地址 -->
+	<entry key="accessTokenURL">https://api.weibo.com/oauth2/access_token</entry>
+	<!--https://sso.bingocc.com/server-->
+	<!-- 在新浪微博登录完成后跳转地址 -->
+	<entry key="redirect_URI">http://sso.bingocc.com/oauth_callback?third_party_type=sina_weibo</entry>
+	<!-- 新浪登录的URL(请求用户授权的URL) -->
+	<entry key="sina_user_auth">
+		<![CDATA[${authorizeURL}?client_id=${client_ID}&response_type=code&redirect_uri=${redirect_URI}]]>
+	</entry>
+	<!-- 获取访问令牌的地址 -->
+	<entry key="sina_get_access_token">
+		<![CDATA[${accessTokenURL}?client_id=${client_ID}&client_secret=${client_SERCRET}&grant_type=authorization_code&redirect_uri=${redirect_URI}&code=]]>
+	</entry>
+	<!--腾讯微博的登录认证-->
+	<entry key="TENCENT_WEIBO_APP_ID">801059709</entry>
+	<!-- 签名密钥 -->
+	<entry key="TENCENT_WEIBO_APP_SERCRET">cc16291b30ab00dd2dad9ca8dddfc83e</entry>
+	
+	<entry key="TENCENT_WEIBO_OAUTH_AUTHORIZE">http://open.t.qq.com/cgi-bin/authorize</entry>
+	
+	<entry key="SSO_REG_USER_URL"><![CDATA[http://daily.bingocc.com/modules/Customer/RegisterOpenId.aspx]]></entry>
+	<!--查询SQL，参数：uid、thirdPartyType-->
+	<entry key="thirdparty.queryUserLoginIdByUID">
+	 	SELECT U.user_login_id FROM CUST_OAUTH_USER OU,CUST_SERVICE_USER U WHERE OU.LOGIN_ID = U.user_login_id AND OU.OAUTH_OPENID = #uid# AND OU.OAUTH_PROVIDER = #thirdPartyType# 
+	</entry>
+	<!-- 用户初步绑定,参数：bindingId、uid、thirdPartyType、creationTime -->
+	<entry key="thirdparty.userInitBinding">INSERT INTO cust_oauth_user(BINDING_ID,OAUTH_PROVIDER,OAUTH_OPENID,CREATION_TIME) VALUES(#bindingId#,#thirdPartyType#,#uid#,#creationTime#)</entry>
+</properties>

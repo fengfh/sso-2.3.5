@@ -1,0 +1,152 @@
+.required-star{
+	display:none;
+}
+.none{
+	display:none;
+}
+.body-header{
+	height:72px;
+	background-color: #F5F5F5;
+}
+.headerArea{
+	border:1px solid #ebebeb;
+	height:72px;
+	background-color: #F5F5F5;
+}
+.features{
+	overflow: hidden;
+	margin-top:2em;
+}
+.features li{
+	margin-top:3px;
+	margin-bottom: 3px;
+}
+.features img{
+	margin-top:-3px;
+	float:left;
+}
+.features .title{
+	font-size: 16px;
+	margin-top:0.3em;
+}
+.features p{
+	margin-left:68px;
+}
+.redText{
+	color:#dd4b39;
+	margin-bottom: 10px;
+	margin-top: 50px;
+	font-family: Microsoft YaHei;
+}
+p{
+	line-height: 18px;
+	margin-bottom: 1em;
+	margin-left:5px;
+}
+.footerArea{
+	bottom: 0px;
+	position: absolute;
+	overflow: hidden;
+	border:1px solid #ebebeb;
+	width:100%;
+	height:35px;
+	line-height:35px;
+	text-align: center;
+}
+
+#contentDiv {
+	margin-top:25px;
+}
+
+.listItem{
+	width: 100%;
+	height: 130px;
+	clear: both;
+}
+
+.listItem .showText {
+	float: left; 
+	width: 77%; 
+	margin-left: 10px;
+	vertical-align: middle
+}
+.listItem .showImage {
+	float: left; 
+	width: 20%
+}
+
+.listItem .showImage img {
+	width: 100px;
+	height: 100px
+}
+.listItem .showText img {
+	width: 50px;
+	height: 50px
+}
+
+#profileDiv {
+	margin-top:35px; 
+	width: 100%;
+	margin-bottom: 50px;
+}
+
+#profileDiv #profileImage {
+	width: 120px;
+	height: 120px;
+	padding: 10px;
+} 
+
+#profileDiv .grayTitle {
+	color: gray;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+#profileDiv .userInfo {
+	font-weight: bold;
+	font-size: 1.2em;
+	width: 100%;
+}
+
+#profileDiv .profileText .userID {
+	margin: 10px;
+	width: 100%;
+}
+#profileDiv .profileText .userID input {
+	width: 100%;
+}
+#profileDiv .profileText .userID .inputID {
+	width: 70%;
+	float: left;
+}
+#profileDiv .profileText .userID .buttonCopy {
+	width: 25%;
+	float: right;
+}
+
+p {
+	line-height: 25px;
+	font-size: 1.1em;
+	font-family: Microsoft YaHei;
+}
+
+/*登录输入框*/
+.input-xlarge, .userID input {
+	height: 27px;
+	width: 97%;
+	margin-bottom: 30px;
+}
+
+label, button, span, .btn {
+	line-height: 25px;
+	font-size: 1.1em;
+	font-family: Microsoft YaHei;
+}
+
+label {
+	font-weight: bold;
+}
+
+.colorGray {
+	color: gray;
+}

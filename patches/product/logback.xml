@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>logs/sso.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>sso.%d{yyyy-MM-dd}.log</FileNamePattern>
+		</rollingPolicy>
+		<maxHistory>90</maxHistory> <!-- keep 90 days -->
+		<encoder>
+			<!-- do not add line number output , it will slow down the execution speed -->
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %-36logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+    <logger name="org.jasig.cas"    level="INFO"/>  <!-- level="TRACE" for more detail logs -->
+    <logger name="ch.qos.logback"   level="ERROR"/>
+
+	<root level="ERROR">
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>

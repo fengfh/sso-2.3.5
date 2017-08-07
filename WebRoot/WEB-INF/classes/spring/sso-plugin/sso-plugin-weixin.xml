@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+	<bean id="weiXinConfig" class="bingo.sso.plugin.weixin.WeiXinConfig">
+ 		<property name="corpId" value="${runtime.weixin_corp_id}"></property>
+ 		<property name="secret" value="${runtime.weixin_secret}"/>
+		<property name="tokenUrl" value="${runtime.weixin_token_url}"/>
+		<property name="userinfoUrl" value="${runtime.weixin_userinfo_url}"/>
+		<property name="codeUrl" value="${runtime.weixin_code_url}"/>
+		<property name="useDomain" value="${runtime.weixin_domain}"/>
+		<property name="agentId" value="${runtime.weixin_default_agentid}"/>
+ 	</bean>
+ 	<bean id="weiXinCredentialsResolver" class="bingo.sso.plugin.weixin.WeiXinCredentialsResolver">
+ 		<property name="config" ref="weiXinConfig"></property>
+ 	</bean>
+ 	<bean id="weiXinAuthenticationHandler" class="bingo.sso.plugin.weixin.WeiXinAuthenticationHandler">
+ 		<property name="config" ref="weiXinConfig"></property>
+ 	</bean>
+ 	<bean id="weiXinLoginHandler" class="bingo.sso.plugin.weixin.WeiXinLoginHandler">
+ 		<property name="config" ref="weiXinConfig"></property>
+ 	</bean>
+</beans>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="runtime.deploy">default</entry>
+    <entry key="runtime.theme">default</entry>
+    <entry key="runtime.viewpath">/views/default</entry>
+    <entry key="runtime.logout_url">${runtime.viewpath}/logout.jsp</entry>
+	<entry key="runtime.user_mode">db</entry><!-- db\ad -->
+    <entry key="runtime.ticket_mode">mem</entry><!-- db/mem -->
+	<entry key="runtime.is_ad_full_name">false</entry>
+	<entry key="runtime.default_auth_type">form</entry><!-- form\ntlm -->
+    <entry key="runtime.client_host_mode">mock</entry>
+    <entry key="runtime.random_code_enable">true</entry>
+    <entry key="runtime.bad_authenticate_count">5</entry>
+    <entry key="runtime.login_log_enable">true</entry>
+    <entry key="runtime.spec_secret_enable">true</entry>
+    <entry key="runtime.desktop_password_enable">true</entry>
+    
+    <!-- password encode -->
+    <entry key="runtime.password_encoder">md5</entry><!-- md5\md5_salt -->
+    <entry key="runtime.password_encoder_salt_text">md5_salt_some_text</entry>
+    
+    <!-- token过期时间设置（单位： 毫秒）-->
+    <entry key="runtime.tgt_ticket_expires">36000000</entry><!--默认10小时 -->
+    <entry key="runtime.service_ticket_expires">600000</entry>
+    <entry key="runtime.login_ticket_expires">600000</entry>
+    <entry key="runtime.authorization_code_expires">600000</entry>
+    
+    <!-- jsessionid -->
+    <entry key="runtime.jsession_id">jsessionid</entry>
+    <entry key="runtime.jsession_id_value_prefix"></entry>
+</properties>

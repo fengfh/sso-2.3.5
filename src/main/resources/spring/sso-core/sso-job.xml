@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xmlns:if="http://developer.bingosoft.net/schema/sso/condition"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+	http://developer.bingosoft.net/schema/sso/condition http://developer.bingosoft.net/schema/condition-1.0.xsd">
+
+    <!--Quartz -->
+    <!-- badAuthenticateCounterCleaner CLEANER -->
+    <if:condition test="runtime.random_code_enable=='true'">
+	    <bean id="badAuthenticateCounterCleaner" class="bingo.sso.core.authentication.BadAuthenticateCleaner"
+	          p:badAuthenticateCounter-ref="badAuthenticateCounter" />
+	    
+	    <bean id="jobDetailBadAuthenticateCounterCleaner" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+	          p:targetObject-ref="badAuthenticateCounterCleaner"
+	          p:targetMethod="clean" />
+	    
+	    <bean id="triggerJobDetailBadAuthenticateCounterCleaner" class="org.springframework.scheduling.quartz.SimpleTriggerBean"
+	          p:jobDetail-ref="jobDetailBadAuthenticateCounterCleaner"
+	          p:startDelay="20000"
+	          p:repeatInterval="7200000" />
+    </if:condition>
+
+
+    <!-- ticketGrantingTicketRegistry CLEANER -->
+    <bean id="ticketGrantingTicketRegistryCleaner" class="bingo.sso.core.ticket.TicketRegistryCleaner"
+          p:ticketRegistry-ref="ticketGrantingTicketRegistry" 
+          p:delayExpireTimeMillis="72000000" /><!-- 72000秒,20小时 -->
+    
+    <bean id="jobDetailTicketGrantingTicketRegistryCleaner" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="ticketGrantingTicketRegistryCleaner"
+          p:targetMethod="clean" />
+    
+    <bean id="triggerJobDetailTicketGrantingTicketRegistryCleaner" class="org.springframework.scheduling.quartz.SimpleTriggerBean"
+          p:jobDetail-ref="jobDetailTicketGrantingTicketRegistryCleaner"
+          p:startDelay="20000"
+          p:repeatInterval="5000000" />  
+    
+    <!-- serviceTicketRegistry CLEANER -->
+    <bean id="serviceTicketRegistryCleaner" class="bingo.sso.core.ticket.TicketRegistryCleaner"
+          p:ticketRegistry-ref="serviceTicketRegistry" 
+          p:delayExpireTimeMillis="600000" /><!-- 600秒,10分钟 -->
+    
+    <bean id="jobDetailServiceTicketRegistryCleaner" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="serviceTicketRegistryCleaner"
+          p:targetMethod="clean" />
+    
+    <bean id="triggerJobDetailServiceTicketRegistryCleaner" class="org.springframework.scheduling.quartz.SimpleTriggerBean"
+          p:jobDetail-ref="jobDetailServiceTicketRegistryCleaner"
+          p:startDelay="20000"
+          p:repeatInterval="5000000" /> 
+          
+    <!-- loginTicketRegistry CLEANER -->
+    <bean id="loginTicketRegistryCleaner" class="bingo.sso.core.ticket.TicketRegistryCleaner"
+          p:ticketRegistry-ref="loginTicketRegistry" 
+          p:delayExpireTimeMillis="600000" /><!-- 600秒,10分钟 -->
+    
+    <bean id="jobDetailLoginTicketRegistryCleaner" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="loginTicketRegistryCleaner"
+          p:targetMethod="clean" />
+    
+    <bean id="triggerJobDetailLoginTicketRegistryCleaner" class="org.springframework.scheduling.quartz.SimpleTriggerBean"
+          p:jobDetail-ref="jobDetailLoginTicketRegistryCleaner"
+          p:startDelay="20000"
+          p:repeatInterval="5000000" /> 
+   
+    <!-- authorizationCodeTicketRegistry CLEANER -->
+    <bean id="authorizationCodeTicketRegistryCleaner" class="bingo.sso.core.ticket.TicketRegistryCleaner"
+          p:ticketRegistry-ref="authorizationCodeTicketRegistry" 
+          p:delayExpireTimeMillis="600000" /><!-- 600秒,10分钟 -->
+    
+    <bean id="jobDetailAuthorizationCodeTicketRegistryCleaner" class="org.springframework.scheduling.quartz.MethodInvokingJobDetailFactoryBean"
+          p:targetObject-ref="authorizationCodeTicketRegistryCleaner"
+          p:targetMethod="clean" />
+    
+    <bean id="triggerJobDetailAuthorizationCodeTicketRegistryCleaner" class="org.springframework.scheduling.quartz.SimpleTriggerBean"
+          p:jobDetail-ref="jobDetailAuthorizationCodeTicketRegistryCleaner"
+          p:startDelay="20000"
+          p:repeatInterval="5000000" /> 	
+</beans>

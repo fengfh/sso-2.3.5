@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="jdbcAuthenticationHandler.getUserPassword">
+    	<!-- 
+    	select login_id userid,'ISMvKXpXpadDiUoOSoAfww==' password from sec_user
+    	where login_id=#username#
+    	 -->
+		<!-- 密码
+		admin:  ISMvKXpXpadDiUoOSoAfww==
+		111111: lueSGJZetyySpUndWjMBEg==-->
+		select '$username$' userid, 'lueSGJZetyySpUndWjMBEg==' password from dual		
+		<!-- 若启用域用户登录，需要返回查询的用户的用户域
+		select '$username$' userid, 'lueSGJZetyySpUndWjMBEg==' password, '$e_code$' domain from dual		
+		 -->
+		<!-- sql demo 
+    	SELECT login_id userid,PASSWORD FROM cust_service_user where user_login_id = #username# and is_actived = 1
+    	select '$username$' userid, 'ISMvKXpXpadDiUoOSoAfww==' password from dual
+		select u.user_id "userid", u.password "password" from usf_user u
+		where u.account= #username#
+		-->
+		    	
+        <!-- Oracle Or H2 database Test Query
+        select '$username$' userid, 'ISMvKXpXpadDiUoOSoAfww==' password from dual
+        -->
+        
+        <!-- SQL Server Test Query 
+        
+        select '$username$' userid, 'ISMvKXpXpadDiUoOSoAfww==' password
+         -->
+    </entry>
+</properties>

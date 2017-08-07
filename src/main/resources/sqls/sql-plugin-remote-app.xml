@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="remote.app.token.create">
+    	insert into SSO_REMOTE_APP_TOKEN(USER_ID,TOKEN,LAST_UPDATED)
+    		values( #userId#,#token#,#lastUpdated# )
+    </entry>
+    
+    <entry key="remote.app.token.update">
+    	update SSO_REMOTE_APP_TOKEN 
+	    	set TOKEN = #token# , 
+	    	LAST_UPDATED = #lastUpdated# 
+    	where USER_ID = #userId#
+    </entry>
+   
+    <entry key="remote.app.token.findByUserId">
+    	SELECT * FROM SSO_REMOTE_APP_TOKEN 
+    		where USER_ID = #userId#
+    </entry>
+    
+  
+
+</properties>

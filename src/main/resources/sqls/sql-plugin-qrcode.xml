@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+	<entry key="db.QRCode.credential.add">
+    	insert into sso_qrcode_token(id,login_ticket,nonce,status,confirm_url,expired_time,created_time)
+    		values(#id#,#loginTicket#,#nonce#,#status#,#confirmUrl#,#expiredTime#,#createdTime#)
+    </entry>
+	<entry key="db.QRCode.credential.find">
+    	select * from sso_qrcode_token where id=#id#
+    </entry>
+	<entry key="db.QRCode.credential.updateStatus">
+    	update sso_qrcode_token set status=#status# where id=#id#
+    </entry>
+	<entry key="db.QRCode.credential.delete">
+    	delete from sso_qrcode_token where id=#id#
+    </entry>
+</properties>

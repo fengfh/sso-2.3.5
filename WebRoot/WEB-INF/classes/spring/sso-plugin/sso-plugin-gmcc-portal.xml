@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+	
+	<bean id="portalLoginHandler" class="bingo.sso.plugin.gmcc.portal.PortalLoginHandler">
+	</bean>
+	
+	<bean id="gmccPortalCookieRetrievingHandler" class="bingo.sso.plugin.gmcc.portal.GmccPortalCookieRetrievingHandler">
+		<property name="cookieName" value="${portal.cookieName}" />
+	</bean>
+	
+	<bean id="gmccPortalCookieAuthenticateHandler" class="bingo.sso.plugin.gmcc.portal.GmccPortalCookieAuthenticateHandler" />
+	
+	<bean id="portalCookieAuthenticationHandler" class="bingo.sso.plugin.gmcc.portal.PoralCookieAuthenticationHandler">
+		<property name="runInMockEnviroment" value="false" />
+		<property name="convertPortalAccount" value="${portal.convertPortalAccount}" />
+		<property name="portalService" ref="portalService" />
+	</bean>
+	
+	<bean id="portalUserPasswordAuthenticationHandler" class="bingo.sso.plugin.gmcc.portal.PoralUserPasswordAuthenticationHandler">
+		<property name="runInMockEnviroment" value="false" />
+		<property name="convertPortalAccount" value="${portal.convertPortalAccount}" />
+		<property name="cookieName" value="${portal.cookieName}" />
+		<property name="cookieDomain" value="${portal.cookieDomain}" />
+		<property name="portalService" ref="portalService" />
+	</bean>
+	
+	<!--  mock -->
+	<bean id="portalService" class="bingo.sso.plugin.gmcc.portal.ws.MockPortalWSService">
+		<property name="account" value="admin" />		
+	</bean>
+	
+	<!-- 广东省移动  
+    <bean id="portalService" class="bingo.sso.plugin.gmcc.portal.ws.gd.PortalWSService">
+		<property name="tokenCheckEndpoint" value="${portal.tokenCheckEndpoint}" />
+		<property name="userPasswordCheckEndpoint" value="${portal.userPasswordCheckEndpoint}" />
+		<property name="systemId" value="${portal.systemId}" />
+		<property name="account" value="${portal.account}" />
+		<property name="password" value="${portal.password}" />
+	</bean>
+	-->
+	<!--  南方基地
+	<bean id="portalService" class="bingo.sso.plugin.gmcc.portal.ws.nfjd.PortalWSService">
+		<property name="tokenCheckEndpoint" value="${portal.tokenCheckEndpoint}" />
+		<property name="userPasswordCheckEndpoint" value="${portal.userPasswordCheckEndpoint}" />
+		<property name="systemId" value="${portal.systemId}" />
+		<property name="account" value="${portal.account}" />
+		<property name="password" value="${portal.password}" />
+	</bean>
+	
+	 -->
+</beans>

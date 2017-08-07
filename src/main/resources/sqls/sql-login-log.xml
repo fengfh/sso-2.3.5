@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="LoginLog.login">
+    	INSERT INTO SSO_LOGIN_LOG 
+    	( ID , TICKET_ID , PRINCIPAL_ID , AUTH_TYPE , IS_DESKTOP_LOGIN ,  RETURN_URL , CLIENT_ID , HOST_NAME , USER_AGENT_ADDR,LOGIN_TIME ) 
+		VALUES
+		( #id# , #ticketId# , #principalId# , #authType# , #isDesktopLogin# ,  #returnUrl# , #clientId# , #hostName# , #userAgentAddr#,#loginTime# )
+    </entry>
+    
+    <entry key="LoginLog.logout">
+    	INSERT INTO SSO_LOGOUT_LOG 
+    	( ID , TICKET_ID , RETURN_URL , HOST_NAME , USER_AGENT_ADDR, LOGOUT_TIME )
+    	VALUES
+    	(#id# , #ticketId# , #returnUrl# , #hostName# , #userAgentAddr#, #logoutTime#)
+    </entry>
+        
+</properties>

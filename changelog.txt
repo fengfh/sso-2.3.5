@@ -1,0 +1,22 @@
+--------------------2.3.0----------------------
+1、应用专用密码（数据库、页面、服务类）增强
+a、增加sso-controller.xml,修改web.xml
+b、增加bingo/sso/server/web/controller/SpecSecretController.java类
+c、增加WebRoot/modules/specsecret页面、themes样式修改及增加images文件夹
+d、数据库表SSO_APP_SPECIFIED_SECRET增加字段NAME、LAST_USED_TIME
+f、/sqls/sql-appspecifiedsecretmanager.xml的修改
+2、增加SpringMVC
+修改web.xml，增加Servlet
+修改applicationContext.mxl增加MVC的配置
+
+---2.3.1---
+1、DB Token 清除
+a、更新bingo-sso-core.jar ：删除掉本地库的缓存
+b、/sso-core/sso-job.xml、/sso-plugin/sso-plugin-registry-db.xml、/sso-plugin/sso-plugin-registry.xml
+c、/sqls/sql-ticket-registry.xml
+
+--2.3.3--
+2014.01.15 :增加密码输入超过指定次数后，帐号将锁定一定时间功能
+
+--2.3.4--
+2014.2.24  :增加Saml1.0 Saml1.1协议支持

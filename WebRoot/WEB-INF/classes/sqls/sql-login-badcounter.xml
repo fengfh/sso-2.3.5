@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<!-- 错误次数控制 -->
+	<entry key="db.badAuthenticate.Counter.add">
+		insert into sso_badauth_counter
+			(identity,credentials_type,count,locked_time)
+		values
+			(#identity#,#credentialsType#,#count#,#lockedTime#)
+    </entry>
+	<entry key="db.badAuthenticate.Counter.find">
+    	select * from sso_badauth_counter where identity=#identity# and credentials_type=#credentialsType#
+    </entry>
+	<entry key="db.badAuthenticate.Counter.update">
+    	update sso_badauth_counter set count=#count#,locked_Time=#lockedTime#
+    		where identity=#identity# and credentials_type=#credentialsType#
+    </entry>
+	<entry key="db.badAuthenticate.Counter.delete">
+    	delete from sso_badauth_counter
+    		where identity=#identity# and credentials_type=#credentialsType#
+    </entry>
+</properties>

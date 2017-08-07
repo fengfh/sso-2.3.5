@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+	<bean id="ntlmAuthenticationHandler" class="bingo.sso.plugin.ntlm.NTLMAuthenticationHandler">
+		<property name="fullName"   value="${runtime.is_ad_full_name}"/>
+	</bean>
+	
+	<!-- windows 集成认证的登录处理器  
+    	遗留问题：有发现过本地映射域名的访问，不能验证，换成IP没问题
+    -->
+    <bean id="windowsNTLMLoginHandler" class="bingo.sso.plugin.ntlm.NTLMLoginHandler">
+        <property name="fullName"   value="${runtime.is_ad_full_name}"/>
+        <property name="filterName" value="ntlm-authenticate-filter"/>
+        <property name="filter">
+            <bean class="waffle.servlet.NegotiateSecurityFilter"/>
+        </property>
+        <property name="initParams">
+            <map>
+                <entry key="principalFormat" value="fqn"/>
+                <entry key="roleFormat"      value="both"/>    
+                <entry key="allowGuestLogin" value="false"/>    
+                <entry key="securityFilterProviders">
+                    <value>
+                        waffle.servlet.spi.BasicSecurityFilterProvider
+                        waffle.servlet.spi.NegotiateSecurityFilterProvider
+                    </value>
+                </entry>
+                <entry key="waffle.servlet.spi.BasicSecurityFilterProvider/realm" 
+                       value="Single Sign On Service"/>
+                <entry key="waffle.servlet.spi.NegotiateSecurityFilterProvider/protocols">
+                    <value>
+                		Negotiate
+                		NTLM           
+                    </value>
+                </entry>                                                                                                    
+            </map>
+        </property>
+    </bean>
+			
+</beans>

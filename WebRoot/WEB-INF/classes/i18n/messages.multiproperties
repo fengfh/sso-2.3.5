@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<MultiProperties xmlns="hu.skzs.multiproperties">
+    <Version>1.1</Version>
+    <Name>messages.multiproperties</Name>
+    <Description></Description>
+    <Handler>Java Properties Handler</Handler>
+    <Columns>
+        <Key>
+            <Width>272</Width>
+        </Key>
+        <Column>
+            <Name></Name>
+            <Description></Description>
+            <Width>258</Width>
+            <HandlerConfiguration>/bingo-sso-server-webapp/src/main/resources/i18n/messages.properties|false|false|false|false</HandlerConfiguration>
+        </Column>
+        <Column>
+            <Name>zh_CN</Name>
+            <Description></Description>
+            <Width>327</Width>
+            <HandlerConfiguration>/bingo-sso-server-webapp/src/main/resources/i18n/messages_zh_CN.properties|false|false|false|false</HandlerConfiguration>
+        </Column>
+        <Column>
+            <Name>en</Name>
+            <Description></Description>
+            <Width>150</Width>
+            <HandlerConfiguration>/bingo-sso-server-webapp/src/main/resources/i18n/messages_en.properties|false|false|false|false</HandlerConfiguration>
+        </Column>
+    </Columns>
+    <Records>
+        <Property>
+            <Name>login.form.title</Name>
+            <Description>系统登录Title</Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">系统登录</Value>
+            <Value disabled="false">系统登录</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>login.form.username</Name>
+            <Disabled>false</Disabled>
+            <Value disabled="false">登录账号</Value>
+            <Value disabled="false">登录账号</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>login.form.password</Name>
+            <Disabled>false</Disabled>
+            <Value disabled="false">登录密码</Value>
+            <Value disabled="false">登录密码</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>login.form.randomcode</Name>
+            <Disabled>false</Disabled>
+            <Value disabled="false">验证码</Value>
+            <Value disabled="false">验证码</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>logout.view.title</Name>
+            <Disabled>false</Disabled>
+            <Value disabled="false">注销</Value>
+            <Value disabled="false">注销</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>Credentials.Username.Required</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">请输入账号</Value>
+            <Value disabled="false">请输入账号</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>Credentials.Password.Required</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">请输入密码</Value>
+            <Value disabled="false">请输入密码</Value>
+            <Value disabled="false">password required</Value>
+        </Property>
+        <Property>
+            <Name>Credentials.RandomCode.Required</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">请输入验证码</Value>
+            <Value disabled="false">请输入验证码</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>Credentials.RandomCode.Failed</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">验证码不正确</Value>
+            <Value disabled="false">验证码不正确</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>Authentication.Credentials.Bad</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">用户或密码不正确，请重新输入</Value>
+            <Value disabled="false">用户或密码不正确，请重新输入</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>Authentication.Credentials.Unsupported</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">不支持的凭证</Value>
+            <Value disabled="false">不支持的凭证</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>Authentication.AppspecifiedSecret.Bad</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">无效的用户名和密码，请确认你输入的是“应用专用密码”</Value>
+            <Value disabled="false">无效的用户名和密码，请确认你输入的是“应用专用密码”</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>Authentication.Assertion.Bad</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">无效的签名</Value>
+            <Value disabled="false">无效的签名</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>Authentication.AuthorizationCode.Bad</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">无效的AuthorizationCode</Value>
+            <Value disabled="false">无效的AuthorizationCode</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>Authentication.LoginTicket.Bad</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">无效的LoginTicket</Value>
+            <Value disabled="false">无效的LoginTicket</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>Authentication.TicketGrantingTicket.Bad</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">无效的TicketGrantingTicket</Value>
+            <Value disabled="false">无效的TicketGrantingTicket</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>Ticket.TicketgGrantingTicket.Invalid</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">无效的TicketGrantingTicket</Value>
+            <Value disabled="false">无效的TicketGrantingTicket</Value>
+            <Value disabled="true"></Value>
+        </Property>
+        <Property>
+            <Name>Ticket.ServiceTicket.Invalid</Name>
+            <Description></Description>
+            <Disabled>false</Disabled>
+            <Value disabled="false">无效的ServiceTicket</Value>
+            <Value disabled="false">无效的ServiceTicket</Value>
+            <Value disabled="true"></Value>
+        </Property>
+    </Records>
+</MultiProperties>

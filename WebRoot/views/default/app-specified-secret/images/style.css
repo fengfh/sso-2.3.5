@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+body{ margin:0; padding:0; background:url(bodybg.gif) repeat-x left top;font-family: "Microsoft YaHei" ,Helvetica, Arial, Verdana, "宋体"; font-size:12px;}
+
+/*Get password style*/
+.maincontent{text-align:center;background:url(bodybg2.gif) repeat-x left bottom;}
+.getpass{ width:1003px; min-height:500px; margin:0 auto; text-align:left;}
+.getpass{}
+.getpass h1{ height:32px; line-height:32px; color:#f59621; margin:0; padding:0; font-size:15px;  border-bottom:solid 1px #d6e5fa;}
+.getpass-content{ margin:30px 40px; clear:both;}
+.getpass-content .getpass-info{ width:340px; font-size:14px; color:#5a5a5a; float:left;}
+.getpass-content .getpass-info dl{ margin:0; padding:0; }
+.getpass-content .getpass-info dt{ margin:10px 0 6px 0; padding:0 0 0 25px;background:url(dot.png) no-repeat left center; font-weight:bold;}
+.getpass-content .getpass-info dd{ margin:0; padding:0 0 0 25px; line-height:20px; font-size:12px;}
+.getpass-content .getpass-info dd span{ font-weight:bold;}
+
+.getpass-content .getpass-word  
+{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:solid 3px #ffb471;
+    background:#fffcdf;
+    width:425px;
+    height:330px;
+    float:left;
+    margin-left:50px;
+    }
+.getpass-content .getpass-word  p{ text-align:center; margin-top:115px;}
+.getpass-content .getpass-word  p span{ display:block; font-size:20px; color:#5e5e5e; margin-bottom:18px;}
+
+.btn-copy 
+{
+    width:81px;
+    height:35px;
+    background-color: #ff7400; 
+    border-color: #d3d3d3;
+    color: #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:none;
+}
+.btn-copy :hover,.btn-copy:active,.btn-copy.active,.btn-copy.disabled,.btn-copy[disabled] {background-color: #ff7400;color:#fff;}
+.btn-copy:active,
+.btn-copy.active {background-color: #f8f8f8 \9;}
+

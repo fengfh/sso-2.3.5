@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+
+/********** common style **********/
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, optgroup,form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {  border: 0 none; font-size: 100%; margin: 0; padding: 0;}
+html, body {font-size:12px; color:#333; line-height:22px;font-family: 微软雅黑,宋体,Verdana,Arial;}
+section, article, aside, header, footer, nav, dialog, figure { display: block; }
+figure { margin: 0; }
+h1, h2, h3, h4, h5, h6, em, strong, input, textarea {font-size:12px; font-style:normal; font-weight:normal; }
+ul, li { list-style:none; }
+input, select, textarea { font-size:12px; vertical-align:middle; line-height:16px;font-family: 微软雅黑,宋体,Verdana,Arial;}
+textarea { border:1px solid #d4d4d4; }
+a img { border:0; }
+a{/*L-V-H-A*/text-decoration:none; color:#000000; }
+a:hover{ text-decoration:underline; color:#DA6C00; }
+
+
+.body_oalogin_page{ background-color:#e6e6e6;}
+
+.login_page{ }
+.login_page .login_page_logo{ padding-top: 32px;text-align: center;margin-bottom: 20px;background:url(oalogin/page_logo_bg.png) repeat-x left bottom;height: 189px;}
+.login_page .login_page_cotent{top: 50%;
+left: 50%;
+position: absolute;
+margin: -80px auto 0 -232px;
+height: 254px;
+width: 464px;
+background: url(oalogin/login_c_bg.png) no-repeat left top;}
+
+.login_page_title{font-family: 微软雅黑; color:#005995; font-size:22px; font-weight:bold; padding-top:64px; padding-left:446px; display:none;}
+.login_page_info{ position: relative;}
+.login_page_info_tab{top: 16px;
+position: absolute;
+left: 117px;}
+.login_page_info .login_page_info_tab th{ font-weight:normal; color:#fff; width:58px; text-align:center; font-weight: normal;
+font-size: 16px;
+color: #bfbfbf;
+width: 65px;
+text-align: center;height: 28px;}
+.login_page_info .login_page_info_tab td{ color:#666;}
+.login_page_info .login_page_info_tab .input_text{background: #fff;
+border: 0;
+width: 178px;
+height: 23px;}
+ .input_test{border: 0;
+width: 110px;
+height: 27px;
+background-color: #fff;}
+.yzm_box{left: 98px;
+position: absolute;
+top: 118px;
+background: url(oalogin/yzm_bg.png) no-repeat left top;
+width: 300px;
+}
+.yzm_box *{vertical-align: bottom;}
+.confirm_btn{left: 97px;
+position: absolute;
+top: 192px;}
+.confirm_btn a{ background: url(oalogin/login_page_btn_bg.png) no-repeat left top;
+width: 280px;
+font-size: 18px;
+font-weight: normal;
+height: 39px;
+display: inline-block;
+color: #fff;
+line-height: 39px;
+text-align: center;}
+.login_foot{ background: #fff url(oalogin/login_foot.png) repeat-x; height:108px; line-height:108px; font-size:16px; text-align:center;bottom: 0;
+width: 100%;
+position: absolute;}
+.confirm_btn a:hover{ background:url(oalogin/login_page_btn_bg_h.png) no-repeat left top;width:280px; font-size: 18px; font-weight:normal;height:39px; display:inline-block; color:#fff; line-height:39px; text-align:center; text-decoration: none;}
+.login_page_news{ padding-top:35px; padding-left:430px;}
+.login_page_news .news_title{ color:#0778b4; font-weight:bold;}
+.login_page_news .news_title img{ margin-bottom:-2px; margin-right:5px;}
+.login_page_news .news_meat{ padding-left:15px;}
+.login_page_news .news_meat li{ height:20px; line-height:20px;}
+.login_page_news .news_meat li img{margin-right:5px;}
+

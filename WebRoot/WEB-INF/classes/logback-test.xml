@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+	<!-- 控制台输出日志 -->  
+	<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+		<layout class="ch.qos.logback.classic.PatternLayout">
+			<pattern>%-5level %d{yyyy-MM-dd HH:mm:ss.SSS} [%thread]  %logger{100}[line:%L] - %msg%n</pattern>
+		</layout>
+	</appender>
+
+	<appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+		<File>${catalina.base}/logs/sso.log</File>
+		<rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+			<FileNamePattern>${catalina.base}/logs/sso.%d{yyyy-MM-dd}.log</FileNamePattern>
+			<maxHistory>20</maxHistory> <!-- keep 90 days -->
+		</rollingPolicy>		
+		<encoder>
+			<!-- do not add line number output , it will slow down the execution speed -->
+			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %-36logger{36} - %msg%n</pattern>
+		</encoder>
+	</appender>
+	
+	<logger name="bingo.sso.server" level="DEBUG"/> <!-- level="TRACE" for more detail logs -->
+    <logger name="org.jasig.cas"    level="DEBUG"/>  <!-- level="TRACE" for more detail logs -->
+    <logger name="ch.qos.logback"   level="ERROR"/>
+
+	<root level="DEBUG">
+		<appender-ref ref="STDOUT" />
+		<appender-ref ref="FILE" />
+	</root>
+</configuration>

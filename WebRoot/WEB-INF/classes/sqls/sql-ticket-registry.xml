@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="dbTicketGrantingTicketRegistry.addTicket">
+		insert into sso_ticket
+		  (id, ticket_id, ticket, ticket_type, host_name, CREATE_TIME)
+		values
+		  (#ticketId#, #ticketId#, #ticket#, #ticketType#, #hostName#, #createTime#)
+	</entry>
+	<entry key="dbTicketGrantingTicketRegistry.updateTicketState">
+		update sso_ticket
+		   set ticket = #ticket#
+		 where ticket_id = #ticketId#
+	</entry>
+	<entry key="dbTicketGrantingTicketRegistry.deleteTicket">
+		 delete from sso_ticket
+  			where ticket_id = #ticketId#
+	</entry>
+	<entry key="dbTicketGrantingTicketRegistry.getTicket">
+		select id, ticket_id, ticket, ticket_type
+		  from sso_ticket
+		 where ticket_id = #ticketId#
+	</entry>
+	<entry key="dbTicketGrantingTicketRegistry.getTickets">
+		select id, ticket_id, ticket, ticket_type, create_time
+		  from sso_ticket
+		 where TICKET_TYPE = #ticketType#
+		 order by CREATE_TIME asc
+	</entry>
+	<entry key="dbTicketGrantingTicketRegistry.addExInfo">
+		insert into sso_ticket_ex
+			(ticket_id,item_name,item_value,create_time)
+		value
+			(#ticketId#,#itemName#,#itemValue#,#createTime#)
+	</entry>
+	<entry key="dbTicketGrantingTicketRegistry.getExInfo">
+		select ticket_id,item_name,item_value
+			from sso_ticket_ex
+			where ticket_id=#ticketId# and item_name=#itemName#
+	</entry>
+	<entry key="dbTicketGrantingTicketRegistry.deleteExInfo">
+		 delete from sso_ticket_ex
+  			where ticket_id = #ticketId#
+	</entry>
+
+</properties>

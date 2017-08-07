@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+	<display-name>bingo sso server</display-name>
+
+	<!-- spring configuration -->
+	<context-param>
+	    <param-name>contextClass</param-name>
+	    <param-value>bingo.sso.core.spring.MyXmlWebApplicationContext</param-value>
+	</context-param>
+	<context-param>
+	    <param-name>contextInitializerClasses</param-name>
+	    <param-value>bingo.sso.core.spring.ContextInitializer</param-value>
+	</context-param>
+
+	<context-param>
+	    <param-name>propertySourceLocation</param-name>
+	    <param-value>
+	   		classpath:config/*.xml
+	    </param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>
+            classpath:spring/applicationContext.xml
+            classpath:spring/dataAccessContext.xml
+            classpath:spring/sso-controller.xml
+            classpath:spring/sso-deploy.xml
+            classpath:spring/sso-servlet.xml
+            classpath:spring/sso-core/*.xml
+		</param-value>
+	</context-param>
+	<listener>
+		<listener-class>bingo.sso.core.spring.ContextLoaderListener</listener-class>
+	</listener>
+	<listener>
+		<listener-class>org.springframework.web.context.request.RequestContextListener</listener-class>
+	</listener>
+
+
+ 	<!-- applicationFilter -->
+ 	<filter>
+		<filter-name>applicationFilter</filter-name>
+		<filter-class>bingo.common.core.servlets.ApplicationFilter</filter-class>
+	</filter>
+
+	<filter-mapping>
+		<filter-name>applicationFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- encoding filter -->
+	<filter>
+		<filter-name>encodingFilter</filter-name>
+		<filter-class>bingo.sso.server.web.servlets.EncodingFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>encodingFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!--处理ouathcallback中转的过滤器-->
+	<filter>
+		<filter-name>thirdparty_callback_filter</filter-name>
+		<filter-class>bingo.sso.plugin.thirdparty.ThirdPartyCallbackFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>thirdparty_callback_filter</filter-name>
+		<url-pattern>/oauth_callback</url-pattern>
+	</filter-mapping>
+	<filter-mapping>
+		<filter-name>thirdparty_callback_filter</filter-name>
+		<url-pattern>/user_reg_callback</url-pattern>
+	</filter-mapping>
+
+	<!-- Java OpenID Server Member URL. -->
+	<filter>
+		<display-name>Member Filter</display-name>
+		<filter-name>Member Filter</filter-name>
+		<filter-class>org.springframework.web.filter.DelegatingFilterProxy</filter-class>
+		<init-param>
+			<param-name>targetBeanName</param-name>
+			<param-value>memberFilter</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>Member Filter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!--针对响应头的filter-->
+	<filter>
+		<filter-name>ResponseHeaderFilter</filter-name>
+		<filter-class>bingo.web.filter.ResponseHeaderFilter</filter-class>
+		<init-param>
+			<param-name>Cache-Control</param-name>
+			<param-value>No-cache</param-value>
+		</init-param>
+		<init-param>
+			<param-name>Pragma</param-name>
+			<param-value>No-cache</param-value>
+		</init-param>
+		<init-param>
+			<param-name>Expires</param-name>
+			<param-value>0</param-value>
+		</init-param>
+		<init-param>
+			<param-name>P3P</param-name>
+			<param-value>CP="CURa ADMa DEVa PSAo PSDo OUR BUS UNI PUR INT DEM STA PRE COM NAV OTC NOI DSP COR"</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>ResponseHeaderFilter</filter-name>
+		<url-pattern>/*</url-pattern>
+	</filter-mapping>
+
+	<!-- desktop servlet -->
+	<servlet>
+		<servlet-name>desktop</servlet-name>
+		<servlet-class>bingo.sso.server.web.servlets.ServletToBeanProxy</servlet-class>
+		<init-param>
+			<param-name>proxy-bean</param-name>
+			<param-value>desktopSignOnServlet</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>desktop</servlet-name>
+		<url-pattern>/desktop/*</url-pattern>
+	</servlet-mapping>
+
+    <!-- sso servlet -->
+	<servlet>
+		<servlet-name>signon</servlet-name>
+		<servlet-class>bingo.sso.server.web.servlets.ServletToBeanProxy</servlet-class>
+		<init-param>
+			<param-name>proxy-bean</param-name>
+			<param-value>serverSignOnServlet</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>signon</servlet-name>
+		<url-pattern>/signon/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- sso servlet -->
+	<servlet>
+		<servlet-name>singleSignOnServlet</servlet-name>
+		<servlet-class>bingo.sso.server.web.servlets.ServletToBeanProxy</servlet-class>
+		<init-param>
+			<param-name>proxy-bean</param-name>
+			<param-value>singleSignOnServlet</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>singleSignOnServlet</servlet-name>
+		<url-pattern>/v2/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- sso servlet -->
+	<servlet>
+		<servlet-name>openidSingleSignOnServlet</servlet-name>
+		<servlet-class>bingo.sso.server.web.servlets.ServletToBeanProxy</servlet-class>
+		<init-param>
+			<param-name>proxy-bean</param-name>
+			<param-value>openidSingleSignOnServlet</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>openidSingleSignOnServlet</servlet-name>
+		<url-pattern>/server/*</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>openidSingleSignOnServlet</servlet-name>
+		<url-pattern>/openid/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- saml sso servlet
+	<servlet>
+		<servlet-name>samlSingleSignOnServlet</servlet-name>
+		<servlet-class>bingo.sso.server.web.servlets.ServletToBeanProxy</servlet-class>
+		<init-param>
+			<param-name>proxy-bean</param-name>
+			<param-value>samlSingleSignOnServlet</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>samlSingleSignOnServlet</servlet-name>
+		<url-pattern>/saml/*</url-pattern>
+	</servlet-mapping>
+	-->
+
+	<!-- authorizationCodeAuthServlet -->
+	<servlet>
+		<servlet-name>authorizationCodeAuthServlet</servlet-name>
+		<servlet-class>bingo.sso.server.web.servlets.ServletToBeanProxy</servlet-class>
+		<init-param>
+			<param-name>proxy-bean</param-name>
+			<param-value>authorizationCodeAuthServlet</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>authorizationCodeAuthServlet</servlet-name>
+		<url-pattern>/authcode/auth</url-pattern>
+	</servlet-mapping>
+
+	<!-- AppSpecifiedSecretIssueServlet -->
+	<servlet>
+		<servlet-name>appSpecifiedSecretIssueServlet</servlet-name>
+		<servlet-class>bingo.sso.server.web.servlets.ServletToBeanProxy</servlet-class>
+		<init-param>
+			<param-name>proxy-bean</param-name>
+			<param-value>appSpecifiedSecretIssueServlet</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>appSpecifiedSecretIssueServlet</servlet-name>
+		<url-pattern>/appspecifiedsecret</url-pattern>
+	</servlet-mapping>
+
+	<!-- Java OpenID Server Member page. -->
+	<servlet>
+		<servlet-name>member</servlet-name>
+		<servlet-class>bingo.sso.server.web.servlets.ServletToBeanProxy</servlet-class>
+		<init-param>
+			<param-name>proxy-bean</param-name>
+			<param-value>memberServlet</param-value>
+		</init-param>
+		<load-on-startup>30</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>member</servlet-name>
+		<url-pattern>/member/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- XRDS Servlet -->
+	<servlet>
+		<servlet-name>MeServlet</servlet-name>
+		<servlet-class>
+			bingo.sso.openid.servlet.MeServlet
+		</servlet-class>
+		<load-on-startup>30</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>MeServlet</servlet-name>
+		<url-pattern>/me</url-pattern>
+	</servlet-mapping>
+	<servlet>
+		<servlet-name>XRDSServlet</servlet-name>
+		<servlet-class>
+			bingo.sso.openid.servlet.XRDSServlet
+		</servlet-class>
+		<load-on-startup>30</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>XRDSServlet</servlet-name>
+		<url-pattern>/xrds</url-pattern>
+	</servlet-mapping>
+
+	<!-- 效验码 -->
+	<servlet>
+		<servlet-name>ValidateCodeServlet</servlet-name>
+		<servlet-class>bingo.sso.server.web.validate.ValidateCodeServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ValidateCodeServlet</servlet-name>
+		<url-pattern>/servlet/validatecode</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>validateCodeNeedCheckServlet</servlet-name>
+		<servlet-class>bingo.sso.server.web.servlets.ServletToBeanProxy</servlet-class>
+		<init-param>
+			<param-name>proxy-bean</param-name>
+			<param-value>validateCodeNeedCheckServlet</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>validateCodeNeedCheckServlet</servlet-name>
+		<url-pattern>/servlet/validatecodeneedcheck</url-pattern>
+	</servlet-mapping>
+
+	<!-- 连接另外的SSO服务器
+	<servlet>
+		<servlet-name>openidclient</servlet-name>
+		<servlet-class>bingo.sso.plugin.ssoconnector.SingleSignOnServlet</servlet-class>
+		<init-param>
+			<param-name>providerEndpoint</param-name>
+			<param-value>http://{host}:{port}/sso/me</param-value>
+		</init-param>
+		<init-param>
+			<param-name>providerAuthEndpoint</param-name>
+			<param-value>http://{host}:{port}/sso/server</param-value>
+		</init-param>
+		<init-param>
+			<param-name>providerLogoutEndpoint</param-name>
+			<param-value>http://{host}:{port}/sso/signon/logout</param-value>
+		</init-param>
+		<init-param>
+			<param-name>providerAuthType</param-name>
+			<param-value>default</param-value>
+		</init-param>
+
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>openidclient</servlet-name>
+		<url-pattern>/openidclient/*</url-pattern>
+	</servlet-mapping>
+	-->
+
+	<servlet>
+		<servlet-name>SpringDispatcherServlet</servlet-name>
+		<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+		<init-param>
+			<param-name>contextAttribute</param-name>
+			<param-value>org.springframework.web.context.WebApplicationContext.ROOT</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>SpringDispatcherServlet</servlet-name>
+		<url-pattern>/</url-pattern>
+	</servlet-mapping>
+
+	<error-page>
+		<error-code>404</error-code>
+		<location>/common/error.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>401</error-code>
+		<location>/common/error.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>403</error-code>
+		<location>/common/error.jsp</location>
+	</error-page>
+
+	<error-page>
+		<error-code>500</error-code>
+		<location>/common/error.jsp</location>
+	</error-page>
+
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+</web-app>

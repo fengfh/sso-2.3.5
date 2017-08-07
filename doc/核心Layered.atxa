@@ -1,0 +1,962 @@
+<,marco.yohn@gmail.com,marco.yohn@gmail.com,marco.yohn@gmail.com,marco.yohn@gmail.com,marco.yohn@gmail.com,marco.yohn@gmail.com,marco.yohn@gmail.com,marco.yohn@gmail.com,marco.yohn@gmail.com,marco.yohn@gmail.com,marco.yohn@gmail.com,marco.yohn@gmail.com> <http://www.architexa.com/rdf/core#creator> "true" .
+
+@prefix atxa-rse-eclipse: <http://www.architexa.com/rdf/rse-eclipse#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix atxa-strata: <http://www.architexa.com/rdf/strata#> .
+@prefix atxa-jdt-wkspc: <http://www.architexa.com/rdf/jdt-wkspc#> .
+@prefix atxa-core: <http://www.architexa.com/rdf/core#> .
+@prefix atxa: <http://www.architexa.com/rdf/> .
+
+<http://www.architexa.com/rdf/rse-eclipse#doc_slLayered2.atxa> a atxa-core:strataFile .
+
+atxa:DetailNode atxa-core:detailLevel "2" .
+
+atxa-core:docRoot atxa-core:browseModel "com.architexa.diagrams.relo.jdt/com.architexa.diagrams.relo.jdt.browse.ClassStrucBrowseModel" ;
+	atxa-core:contains _:node1877s9iutx1 .
+
+_:node1877s9iutx1 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.*> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "true" , "true" , "true" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.servlet> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.logout> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.client> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.ticket> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core$SingleSignOnManager> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core$SingleSignOnController> .
+
+_:node1877s9iutx1 atxa-core:contains _:node1877s9iutx2 .
+
+_:node1877s9iutx2 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login.*> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:2,false,false,true" ;
+	atxa-strata:layerIndex "2" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "true" , "true" , "true" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginController> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$AuthenticateLoginHandler> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$CredentialsLoginHandler> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginFlow> .
+
+_:node1877s9iutx2 atxa-core:contains _:node1877s9iutx3 .
+
+_:node1877s9iutx3 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginController> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx2 atxa-core:contains _:node1877s9iutx4 .
+
+_:node1877s9iutx4 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$AuthenticateLoginHandler> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:2,false,false,true" ;
+	atxa-strata:layerIndex "2" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx2 atxa-core:contains _:node1877s9iutx5 .
+
+_:node1877s9iutx5 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$CredentialsLoginHandler> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:2,false,false,true" ;
+	atxa-strata:layerIndex "2" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx2 atxa-core:contains _:node1877s9iutx6 .
+
+_:node1877s9iutx6 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginFlow> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:1,false,false,true" ;
+	atxa-strata:layerIndex "1" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx1 atxa-core:contains _:node1877s9iutx7 .
+
+_:node1877s9iutx7 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.*> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:3,false,false,true" ;
+	atxa-strata:layerIndex "3" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.appspecifiedsecret.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.assertion.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.authorizationcode.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.form.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.loginticket.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.password.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.principal.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.ticketgrantingticket.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.trusted.*> .
+
+_:node1877s9iutx7 atxa-core:contains _:node1877s9iutx8 .
+
+_:node1877s9iutx8 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication$CredentialsManager> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication$AuthenticationManager> .
+
+_:node1877s9iutx8 atxa-core:contains _:node1877s9iutx9 .
+
+_:node1877s9iutx9 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication$CredentialsManager> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx8 atxa-core:contains _:node1877s9iutx10 .
+
+_:node1877s9iutx10 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication$AuthenticationManager> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx7 atxa-core:contains _:node1877s9iutx11 .
+
+_:node1877s9iutx11 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.appspecifiedsecret.*> ;
+	atxa-strata:nestedLayerIndexes ":2,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "2" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.appspecifiedsecret.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.appspecifiedsecret> .
+
+_:node1877s9iutx11 atxa-core:contains _:node1877s9iutx12 .
+
+_:node1877s9iutx12 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.appspecifiedsecret> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx7 atxa-core:contains _:node1877s9iutx13 .
+
+_:node1877s9iutx13 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.assertion.*> ;
+	atxa-strata:nestedLayerIndexes ":4,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "4" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.assertion.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.assertion> .
+
+_:node1877s9iutx13 atxa-core:contains _:node1877s9iutx14 .
+
+_:node1877s9iutx14 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.assertion> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx7 atxa-core:contains _:node1877s9iutx15 .
+
+_:node1877s9iutx15 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.authorizationcode.*> ;
+	atxa-strata:nestedLayerIndexes ":5,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "5" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.authorizationcode.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.authorizationcode> .
+
+_:node1877s9iutx15 atxa-core:contains _:node1877s9iutx16 .
+
+_:node1877s9iutx16 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.authorizationcode> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx7 atxa-core:contains _:node1877s9iutx17 .
+
+_:node1877s9iutx17 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.form.*> ;
+	atxa-strata:nestedLayerIndexes ":7,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "7" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.form.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.form> .
+
+_:node1877s9iutx17 atxa-core:contains _:node1877s9iutx18 .
+
+_:node1877s9iutx18 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.form> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx7 atxa-core:contains _:node1877s9iutx19 .
+
+_:node1877s9iutx19 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.loginticket.*> ;
+	atxa-strata:nestedLayerIndexes ":8,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "8" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.loginticket.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.loginticket> .
+
+_:node1877s9iutx19 atxa-core:contains _:node1877s9iutx20 .
+
+_:node1877s9iutx20 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.loginticket> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx7 atxa-core:contains _:node1877s9iutx21 .
+
+_:node1877s9iutx21 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.password.*> ;
+	atxa-strata:nestedLayerIndexes ":9,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "9" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.password.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.password> .
+
+_:node1877s9iutx21 atxa-core:contains _:node1877s9iutx22 .
+
+_:node1877s9iutx22 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.password> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx7 atxa-core:contains _:node1877s9iutx23 .
+
+_:node1877s9iutx23 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.principal.*> ;
+	atxa-strata:nestedLayerIndexes ":6,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "6" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.principal.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.principal> .
+
+_:node1877s9iutx23 atxa-core:contains _:node1877s9iutx24 .
+
+_:node1877s9iutx24 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.principal> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx7 atxa-core:contains _:node1877s9iutx25 .
+
+_:node1877s9iutx25 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.ticketgrantingticket.*> ;
+	atxa-strata:nestedLayerIndexes ":3,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "3" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.ticketgrantingticket.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.ticketgrantingticket> .
+
+_:node1877s9iutx25 atxa-core:contains _:node1877s9iutx26 .
+
+_:node1877s9iutx26 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.ticketgrantingticket> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx7 atxa-core:contains _:node1877s9iutx27 .
+
+_:node1877s9iutx27 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.trusted.*> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.trusted.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.trusted> .
+
+_:node1877s9iutx27 atxa-core:contains _:node1877s9iutx28 .
+
+_:node1877s9iutx28 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication.trusted> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx1 atxa-core:contains _:node1877s9iutx29 .
+
+_:node1877s9iutx29 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.*> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.desktop.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.web.*> .
+
+_:node1877s9iutx29 atxa-core:contains _:node1877s9iutx30 .
+
+_:node1877s9iutx30 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx29 atxa-core:contains _:node1877s9iutx31 .
+
+_:node1877s9iutx31 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.desktop.*> ;
+	atxa-strata:nestedLayerIndexes ":2,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "2" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.desktop.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.desktop> .
+
+_:node1877s9iutx31 atxa-core:contains _:node1877s9iutx32 .
+
+_:node1877s9iutx32 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.desktop> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx29 atxa-core:contains _:node1877s9iutx33 .
+
+_:node1877s9iutx33 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.web.*> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.web.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.web> .
+
+_:node1877s9iutx33 atxa-core:contains _:node1877s9iutx34 .
+
+_:node1877s9iutx34 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.protocol.web> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx1 atxa-core:contains _:node1877s9iutx35 .
+
+_:node1877s9iutx35 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.servlet> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "true" , "true" , "true" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.servlet> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.servlet$SingleSignOnServlet> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.servlet$ServerSignOnServlet> .
+
+_:node1877s9iutx35 atxa-core:contains _:node1877s9iutx36 .
+
+_:node1877s9iutx36 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.servlet$SingleSignOnServlet> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx35 atxa-core:contains _:node1877s9iutx37 .
+
+_:node1877s9iutx37 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.servlet$ServerSignOnServlet> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx1 atxa-core:contains _:node1877s9iutx39 .
+
+_:node1877s9iutx39 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.logout> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:2,false,false,true" ;
+	atxa-strata:layerIndex "2" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "true" , "true" , "true" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.logout> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.logout$LogoutController> .
+
+_:node1877s9iutx39 atxa-core:contains _:node1877s9iutx40 .
+
+_:node1877s9iutx40 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.logout$LogoutController> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx1 atxa-core:contains _:node1877s9iutx41 .
+
+_:node1877s9iutx41 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.client> ;
+	atxa-strata:nestedLayerIndexes ":2,false,false,true:3,false,false,true" ;
+	atxa-strata:layerIndex "3" ;
+	atxa-strata:indexWithinLayer "2" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx1 atxa-core:contains _:node1877s9iutx44 .
+
+_:node1877s9iutx44 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.ticket> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:3,false,false,true" ;
+	atxa-strata:layerIndex "3" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx1 atxa-core:contains _:node1877s9iutx46 .
+
+_:node1877s9iutx46 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core$SingleSignOnManager> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:1,false,false,true" ;
+	atxa-strata:layerIndex "1" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx1 atxa-core:contains _:node1877s9iutx47 .
+
+_:node1877s9iutx47 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core$SingleSignOnController> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:1,false,false,true" ;
+	atxa-strata:layerIndex "1" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+atxa-core:docRoot atxa-core:contains _:node1877s9iutx49 .
+
+_:node1877s9iutx49 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.*> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.exception.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.ticket.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.appspecifiedsecret.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.client.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.crypto.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.flow.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.protocol.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.support.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.utils.*> .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx50 .
+
+_:node1877s9iutx50 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api$ISingleSignOnManager> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api$ISingleSignOnController> .
+
+_:node1877s9iutx50 atxa-core:contains _:node1877s9iutx51 .
+
+_:node1877s9iutx51 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api$ISingleSignOnManager> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx50 atxa-core:contains _:node1877s9iutx52 .
+
+_:node1877s9iutx52 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api$ISingleSignOnController> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx53 .
+
+_:node1877s9iutx53 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.*> ;
+	atxa-strata:nestedLayerIndexes ":2,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "2" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.password.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.trusted.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.handler.*> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.principal.*> .
+
+_:node1877s9iutx53 atxa-core:contains _:node1877s9iutx54 .
+
+_:node1877s9iutx54 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication$ICredentialsManager> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication$IAuthenticationManager> .
+
+_:node1877s9iutx54 atxa-core:contains _:node1877s9iutx55 .
+
+_:node1877s9iutx55 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication$ICredentialsManager> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx54 atxa-core:contains _:node1877s9iutx56 .
+
+_:node1877s9iutx56 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication$IAuthenticationManager> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx53 atxa-core:contains _:node1877s9iutx57 .
+
+_:node1877s9iutx57 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.password.*> ;
+	atxa-strata:nestedLayerIndexes ":2,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "2" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.password.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.password> .
+
+_:node1877s9iutx57 atxa-core:contains _:node1877s9iutx58 .
+
+_:node1877s9iutx58 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.password> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx53 atxa-core:contains _:node1877s9iutx59 .
+
+_:node1877s9iutx59 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.trusted.*> ;
+	atxa-strata:nestedLayerIndexes ":4,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "4" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.trusted.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.trusted> .
+
+_:node1877s9iutx59 atxa-core:contains _:node1877s9iutx60 .
+
+_:node1877s9iutx60 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.trusted> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx53 atxa-core:contains _:node1877s9iutx61 .
+
+_:node1877s9iutx61 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.handler.*> ;
+	atxa-strata:nestedLayerIndexes ":3,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "3" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.handler.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.handler> .
+
+_:node1877s9iutx61 atxa-core:contains _:node1877s9iutx62 .
+
+_:node1877s9iutx62 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.handler> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.handler> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.handler$AuthenticationHandler> .
+
+_:node1877s9iutx62 atxa-core:contains _:node1877s9iutx63 .
+
+_:node1877s9iutx63 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.handler$AuthenticationHandler> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx53 atxa-core:contains _:node1877s9iutx64 .
+
+_:node1877s9iutx64 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.principal.*> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.principal.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.principal> .
+
+_:node1877s9iutx64 atxa-core:contains _:node1877s9iutx65 .
+
+_:node1877s9iutx65 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.principal> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.principal> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.principal$CredentialsResolver> .
+
+_:node1877s9iutx65 atxa-core:contains _:node1877s9iutx66 .
+
+_:node1877s9iutx66 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.principal$CredentialsResolver> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx67 .
+
+_:node1877s9iutx67 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.exception.*> ;
+	atxa-strata:nestedLayerIndexes ":4,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "4" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.exception.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.exception> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.exception.handlers.*> .
+
+_:node1877s9iutx67 atxa-core:contains _:node1877s9iutx68 .
+
+_:node1877s9iutx68 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.exception> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx67 atxa-core:contains _:node1877s9iutx69 .
+
+_:node1877s9iutx69 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.exception.handlers.*> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.exception.handlers.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.exception.handlers> .
+
+_:node1877s9iutx69 atxa-core:contains _:node1877s9iutx70 .
+
+_:node1877s9iutx70 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.exception.handlers> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx71 .
+
+_:node1877s9iutx71 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.*> ;
+	atxa-strata:nestedLayerIndexes ":5,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "5" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.handlers.*> .
+
+_:node1877s9iutx71 atxa-core:contains _:node1877s9iutx72 .
+
+_:node1877s9iutx72 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login$ILoginController> .
+
+_:node1877s9iutx72 atxa-core:contains _:node1877s9iutx73 .
+
+_:node1877s9iutx73 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login$ILoginController> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx71 atxa-core:contains _:node1877s9iutx74 .
+
+_:node1877s9iutx74 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.handlers.*> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.handlers.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.handlers> .
+
+_:node1877s9iutx74 atxa-core:contains _:node1877s9iutx75 .
+
+_:node1877s9iutx75 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.handlers> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.handlers> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.handlers$ILoginHandler> .
+
+_:node1877s9iutx75 atxa-core:contains _:node1877s9iutx76 .
+
+_:node1877s9iutx76 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.handlers$ILoginHandler> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx77 .
+
+_:node1877s9iutx77 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout.*> ;
+	atxa-strata:nestedLayerIndexes ":7,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "7" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout.handlers.*> .
+
+_:node1877s9iutx77 atxa-core:contains _:node1877s9iutx78 .
+
+_:node1877s9iutx78 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout$ILogoutController> .
+
+_:node1877s9iutx78 atxa-core:contains _:node1877s9iutx79 .
+
+_:node1877s9iutx79 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout$ILogoutController> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx77 atxa-core:contains _:node1877s9iutx80 .
+
+_:node1877s9iutx80 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout.handlers.*> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout.handlers.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout.handlers> .
+
+_:node1877s9iutx80 atxa-core:contains _:node1877s9iutx81 .
+
+_:node1877s9iutx81 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout.handlers> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx82 .
+
+_:node1877s9iutx82 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.ticket.*> ;
+	atxa-strata:nestedLayerIndexes ":8,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "8" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.ticket.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.ticket> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.ticket.registry.*> .
+
+_:node1877s9iutx82 atxa-core:contains _:node1877s9iutx83 .
+
+_:node1877s9iutx83 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.ticket> ;
+	atxa-strata:nestedLayerIndexes ":1,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "1" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx82 atxa-core:contains _:node1877s9iutx84 .
+
+_:node1877s9iutx84 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.ticket.registry.*> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.ticket.registry.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.ticket.registry> .
+
+_:node1877s9iutx84 atxa-core:contains _:node1877s9iutx85 .
+
+_:node1877s9iutx85 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.ticket.registry> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx86 .
+
+_:node1877s9iutx86 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.appspecifiedsecret.*> ;
+	atxa-strata:nestedLayerIndexes ":10,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "10" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.appspecifiedsecret.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.appspecifiedsecret> .
+
+_:node1877s9iutx86 atxa-core:contains _:node1877s9iutx87 .
+
+_:node1877s9iutx87 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.appspecifiedsecret> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx88 .
+
+_:node1877s9iutx88 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.client.*> ;
+	atxa-strata:nestedLayerIndexes ":11,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "11" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.client.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.client> .
+
+_:node1877s9iutx88 atxa-core:contains _:node1877s9iutx89 .
+
+_:node1877s9iutx89 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.client> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx90 .
+
+_:node1877s9iutx90 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.crypto.*> ;
+	atxa-strata:nestedLayerIndexes ":12,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "12" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.crypto.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.crypto> .
+
+_:node1877s9iutx90 atxa-core:contains _:node1877s9iutx91 .
+
+_:node1877s9iutx91 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.crypto> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx92 .
+
+_:node1877s9iutx92 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.flow.*> ;
+	atxa-strata:nestedLayerIndexes ":9,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "9" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.flow.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.flow> .
+
+_:node1877s9iutx92 atxa-core:contains _:node1877s9iutx93 .
+
+_:node1877s9iutx93 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.flow> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx94 .
+
+_:node1877s9iutx94 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.protocol.*> ;
+	atxa-strata:nestedLayerIndexes ":6,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "6" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.protocol.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.protocol> .
+
+_:node1877s9iutx94 atxa-core:contains _:node1877s9iutx95 .
+
+_:node1877s9iutx95 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.protocol> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx96 .
+
+_:node1877s9iutx96 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.support.*> ;
+	atxa-strata:nestedLayerIndexes ":3,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "3" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.support.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.support> .
+
+_:node1877s9iutx96 atxa-core:contains _:node1877s9iutx97 .
+
+_:node1877s9iutx97 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.support> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+_:node1877s9iutx49 atxa-core:contains _:node1877s9iutx98 .
+
+_:node1877s9iutx98 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.utils.*> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.utils.*> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.utils> .
+
+_:node1877s9iutx98 atxa-core:contains _:node1877s9iutx99 .
+
+_:node1877s9iutx99 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.utils> ;
+	atxa-strata:nestedLayerIndexes ":0,false,false,true:0,false,false,true" ;
+	atxa-strata:layerIndex "0" ;
+	atxa-strata:indexWithinLayer "0" ;
+	atxa-core:containerState "false" , "false" , "false" .
+
+@prefix atxa-rse-eclipse: <http://www.architexa.com/rdf/rse-eclipse#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix atxa-strata: <http://www.architexa.com/rdf/strata#> .
+@prefix atxa-jdt-wkspc: <http://www.architexa.com/rdf/jdt-wkspc#> .
+@prefix atxa-core: <http://www.architexa.com/rdf/core#> .
+@prefix atxa: <http://www.architexa.com/rdf/> .
+
+<http://www.architexa.com/rdf/rse-eclipse#doc_slLayered2.atxa> a atxa-core:strataFile ;
+	atxa-core:contains _:node1877s9iutx3 , _:node1877s9iutx4 , _:node1877s9iutx5 , _:node1877s9iutx6 , _:node1877s9iutx2 , _:node1877s9iutx9 , _:node1877s9iutx10 , _:node1877s9iutx8 , _:node1877s9iutx12 , _:node1877s9iutx11 , _:node1877s9iutx14 , _:node1877s9iutx13 , _:node1877s9iutx16 , _:node1877s9iutx15 , _:node1877s9iutx18 , _:node1877s9iutx17 , _:node1877s9iutx20 , _:node1877s9iutx19 , _:node1877s9iutx22 , _:node1877s9iutx21 , _:node1877s9iutx24 , _:node1877s9iutx23 , _:node1877s9iutx26 , _:node1877s9iutx25 , _:node1877s9iutx28 , _:node1877s9iutx27 , _:node1877s9iutx7 , _:node1877s9iutx30 , _:node1877s9iutx32 , _:node1877s9iutx31 , _:node1877s9iutx34 , _:node1877s9iutx33 , _:node1877s9iutx29 , _:node1877s9iutx36 , _:node1877s9iutx37 , _:node1877s9iutx35 , _:node1877s9iutx40 , _:node1877s9iutx39 , _:node1877s9iutx41 , _:node1877s9iutx44 , _:node1877s9iutx46 , _:node1877s9iutx47 , _:node1877s9iutx1 , _:node1877s9iutx51 , _:node1877s9iutx52 , _:node1877s9iutx50 , _:node1877s9iutx55 , _:node1877s9iutx56 , _:node1877s9iutx54 , _:node1877s9iutx58 , _:node1877s9iutx57 , _:node1877s9iutx60 , _:node1877s9iutx59 , _:node1877s9iutx63 , _:node1877s9iutx62 , _:node1877s9iutx61 , _:node1877s9iutx66 , _:node1877s9iutx65 , _:node1877s9iutx64 , _:node1877s9iutx53 , _:node1877s9iutx68 , _:node1877s9iutx70 , _:node1877s9iutx69 , _:node1877s9iutx67 , _:node1877s9iutx73 , _:node1877s9iutx72 , _:node1877s9iutx76 , _:node1877s9iutx75 , _:node1877s9iutx74 , _:node1877s9iutx71 , _:node1877s9iutx79 , _:node1877s9iutx78 , _:node1877s9iutx81 , _:node1877s9iutx80 , _:node1877s9iutx77 , _:node1877s9iutx83 , _:node1877s9iutx85 , _:node1877s9iutx84 , _:node1877s9iutx82 , _:node1877s9iutx87 , _:node1877s9iutx86 , _:node1877s9iutx89 , _:node1877s9iutx88 , _:node1877s9iutx91 , _:node1877s9iutx90 , _:node1877s9iutx93 , _:node1877s9iutx92 , _:node1877s9iutx95 , _:node1877s9iutx94 , _:node1877s9iutx97 , _:node1877s9iutx96 , _:node1877s9iutx99 , _:node1877s9iutx98 , _:node1877s9iutx49 , atxa-core:docRoot , _:node1877s9iutx3 , _:node1877s9iutx4 , _:node1877s9iutx5 , _:node1877s9iutx6 , _:node1877s9iutx2 , _:node1877s9iutx9 , _:node1877s9iutx10 , _:node1877s9iutx8 , _:node1877s9iutx12 , _:node1877s9iutx11 , _:node1877s9iutx14 , _:node1877s9iutx13 , _:node1877s9iutx16 , _:node1877s9iutx15 , _:node1877s9iutx18 , _:node1877s9iutx17 , _:node1877s9iutx20 , _:node1877s9iutx19 , _:node1877s9iutx22 , _:node1877s9iutx21 , _:node1877s9iutx24 , _:node1877s9iutx23 , _:node1877s9iutx26 , _:node1877s9iutx25 , _:node1877s9iutx28 , _:node1877s9iutx27 , _:node1877s9iutx7 , _:node1877s9iutx30 , _:node1877s9iutx32 , _:node1877s9iutx31 , _:node1877s9iutx34 , _:node1877s9iutx33 , _:node1877s9iutx29 , _:node1877s9iutx36 , _:node1877s9iutx37 , _:node1877s9iutx35 , _:node1877s9iutx40 , _:node1877s9iutx39 , _:node1877s9iutx41 , _:node1877s9iutx44 , _:node1877s9iutx46 , _:node1877s9iutx47 , _:node1877s9iutx1 , _:node1877s9iutx51 , _:node1877s9iutx52 , _:node1877s9iutx50 , _:node1877s9iutx55 , _:node1877s9iutx56 , _:node1877s9iutx54 , _:node1877s9iutx58 , _:node1877s9iutx57 , _:node1877s9iutx60 , _:node1877s9iutx59 , _:node1877s9iutx63 , _:node1877s9iutx62 , _:node1877s9iutx61 , _:node1877s9iutx66 , _:node1877s9iutx65 , _:node1877s9iutx64 , _:node1877s9iutx53 , _:node1877s9iutx68 , _:node1877s9iutx70 , _:node1877s9iutx69 , _:node1877s9iutx67 , _:node1877s9iutx73 , _:node1877s9iutx72 , _:node1877s9iutx76 , _:node1877s9iutx75 , _:node1877s9iutx74 , _:node1877s9iutx71 , _:node1877s9iutx79 , _:node1877s9iutx78 , _:node1877s9iutx81 , _:node1877s9iutx80 , _:node1877s9iutx77 , _:node1877s9iutx83 , _:node1877s9iutx85 , _:node1877s9iutx84 , _:node1877s9iutx82 , _:node1877s9iutx87 , _:node1877s9iutx86 , _:node1877s9iutx89 , _:node1877s9iutx88 , _:node1877s9iutx91 , _:node1877s9iutx90 , _:node1877s9iutx93 , _:node1877s9iutx92 , _:node1877s9iutx95 , _:node1877s9iutx94 , _:node1877s9iutx97 , _:node1877s9iutx96 , _:node1877s9iutx99 , _:node1877s9iutx98 , _:node1877s9iutx49 , atxa-core:docRoot .
+

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"       
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+
+    <bean id="centralTicketService" class="bingo.sso.core.ticket.CentralTicketService"
+          p:authorizationCodeTicketRegistry-ref="authorizationCodeTicketRegistry"
+          p:authorizationCodeTicketExpirationPolicy-ref="authorizationCodeTicketExpirationPolicy"
+          p:ticketGrantingTicketRegistry-ref="ticketGrantingTicketRegistry"
+          p:ticketGrantingTicketExpirationPolicy-ref="ticketGrantingTicketExpirationPolicy"
+          p:serviceTicketRegistry-ref="serviceTicketRegistry"
+          p:serviceTicketExpirationPolicy-ref="serviceTicketExpirationPolicy"
+          p:loginTicketRegistry-ref="loginTicketRegistry"
+          p:loginTicketExpirationPolicy-ref="loginTicketExpirationPolicy"
+          p:uniqueTicketIdGenerator-ref="uniqueTicketIdGenerator"
+          p:loginSessionIdEncoder-ref="loginSessionIdEncoder" />
+    
+    <bean id="loginSessionIdEncoder" class="bingo.sso.core.authentication.password.MessageDigestPasswordEncoder"></bean>
+        
+    <bean id="credentialsToPrincipalResolver" class="bingo.sso.core.authentication.PrincipalResolver">
+        <property name="resolvers">
+            <list>
+                <!-- add your CredentialsToPrincipalResolver here -->                
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="credentialsManager" class="bingo.sso.core.authentication.CredentialsManager" />
+    <bean id="sso.authenticationManager" class="bingo.sso.core.authentication.AuthenticationManager">
+        <property name="credentialsToPrincipalResolvers">
+            <list>
+                <ref bean="credentialsToPrincipalResolver"/>
+            </list>
+        </property>
+        <property name="trustedAuthenticationHandler">
+            <bean class="bingo.sso.core.authentication.TrustedAuthenticationHandler"/>
+        </property>
+        <property name="principalValidators" ref="principalValidators">
+        </property>
+    </bean>        
+    
+    <!-- Exception Handlers -->
+    <util:list id="exceptionHandlers">
+        <bean class="bingo.sso.core.exception.handlers.ForwardRedirectHandler"/>
+        <bean class="bingo.sso.core.login.LoginExceptionHandler"/>
+    </util:list>
+    
+    <bean id="singleSignOnContinueable" class="bingo.sso.core.support.SingleSignOnContinueable"
+    	p:jsessionId="${runtime.jsession_id}" p:jsessionIdValuePrefix="${runtime.jsession_id_value_prefix}"/>
+    	
+    <bean id="sessionInvalidateHandler" class="bingo.sso.core.support.SessionInvalidateHandler"
+    	  p:sessionInvalidatePage="/{theme}/error/session_invalidate.jsp"/>
+
+    <!-- The scheduler bean wires up any triggers that define scheduled tasks -->
+    <bean id="scheduler" class="bingo.sso.core.utils.AutowiringSchedulerFactoryBean"/>
+</beans>

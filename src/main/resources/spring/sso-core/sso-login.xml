@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:if="http://developer.bingosoft.net/schema/sso/condition"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+       http://developer.bingosoft.net/schema/sso/condition http://developer.bingosoft.net/schema/condition-1.0.xsd">
+	
+    <bean id="ticketCookieRetrievingHandler" class="bingo.sso.core.login.TicketCookieRetrievingHandler" />
+          
+    <bean id="ticketCookieWritingHandler" class="bingo.sso.core.login.TicketCookieWritingHandler"/>
+   
+    <bean id="credentialsLoginHandler" class="bingo.sso.core.login.CredentialsLoginHandler" />
+    
+    <bean id="authenticateLoginHandler" class="bingo.sso.core.login.AuthenticateLoginHandler">
+    	<property if:test="runtime.bad_authenticate_enable=='true'" name="badAuthenticateCounter" ref="badAuthenticateCounter"/>
+ 	</bean>     
+    
+    <bean id="gotoLoginFormHandler" class="bingo.sso.core.login.GotoLoginFormHandler"
+    	  p:loginEntryProcessors-ref="loginEntryProcessors" />
+          
+    
+    <bean id="trustedCredentialsHandler" class="bingo.sso.core.login.TrustedCredentialsHandler" />
+    
+    <bean id="loginPathManager" class="bingo.sso.core.login.LoginPathManager"
+          p:serverLocalLoginView="/{theme}/login.jsp"
+          p:relyPartyLoginView="/{theme}/login.jsp"
+          p:oauthAuthrLoginView="/{theme}/login.jsp"
+          p:serverLocalLoginViewPopup="/{theme}/login_popup.jsp"
+          p:relyPartyLoginViewPopup="/{theme}/login_popup.jsp"
+          p:oauthAuthrLoginViewPopup="/{theme}/login_popup.jsp"/>
+          
+    <bean id="logoutPreviousUserHandler" class="bingo.sso.core.login.LogoutPreviousUserHandler"
+          p:goOnLoginConfirmPage="/{theme}/info/go_on_login_confirm.jsp"/>  
+          
+    <bean id="specificLoginAccountHandler" class="bingo.sso.core.login.SpecificLoginAccountHandler"
+          p:goOnLoginConfirmPage="/{theme}/info/go_on_login_confirm.jsp"/>
+    
+    <bean id="grantServiceTicketHandler" class="bingo.sso.core.login.GrantServiceTicketHandler" />
+    <bean id="grantAppSpecifiedSecretHandler" class="bingo.sso.core.login.GrantAppSpecifiedSecretHandler" />
+     
+     
+   <!-- check authentication -->
+   <bean id="validateServiceTicketCheckAuthenticationHandler" class="bingo.sso.core.login.ValidateServiceTicketCheckAuthenticationHandler" />
+</beans>

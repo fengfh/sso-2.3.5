@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+    <entry key="dbClientHostManager.getBycode">
+    	SELECT * FROM SSO_CLIENT_HOST where CODE = #code#
+    </entry>
+    
+    <entry key="dbClientHostManager.getAll">
+    	SELECT * FROM SSO_CLIENT_HOST
+    </entry>
+</properties>

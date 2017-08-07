@@ -1,0 +1,482 @@
+/*** Global styles ***************************************************/
+* {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+em {
+  font-style: normal;
+}
+html, body {
+  margin: 0;
+  border: 0;
+  padding: 0;
+  height: 100%;
+  font-family:Helvetica,Verdana,Tahoma,Arial,Sans;
+  font-size: 13px;
+}
+img {
+  border: none;
+}
+a {
+  color: #071b2a;
+}
+a:focus {
+  outline: none;
+}
+.hint {
+  color: #000;
+  font-size: 90%;
+}
+.plainlink, .emph { /* a.buttonlink exists further down */
+  color: #fc14b1;
+}
+.nicelink { /* a.buttonlink exists further down */
+  color: #44b5f1;
+}
+
+textarea {
+  font-family:Helvetica, Arial, Verdana, sans-serif;
+}
+ul.bulleted {
+  padding-left: 1em;
+  margin: 0.5em 0 0.5em 1em;
+}
+ul.bulleted li {
+  list-style: disc outside;
+}
+ul.bulleted ul {
+  padding-left: 1.2em;
+}
+
+/****************** Body Components ******************/
+
+body#standard,
+body#content {
+  color: #0e2536;
+  float: left;
+  font: small/160% Helvetica, Arial, Verdana, sans-serif;
+  width: 100%;
+  position: relative;
+/* background: -moz-linear-gradient(-90deg,#66C7F5,#2591E8 47px,#FAFBFB 48px,#E9EDEF 49px,#FBFCFC 117px); */
+/* background: -webkit-gradient(linear,center top,center bottom,from(#0c4c75),color-stop(3%, #06283e),color-stop(4%, #052031),to(#052031)); */
+}
+body#standard.b-mac.b-op,
+body#content.b-mac.b-op {
+  font-size: 90%;
+}
+
+#wrapper {
+  margin: 0 auto;
+  text-align: left;
+  width: 950px;
+  xposition: relative; /* fixme */
+}
+#body {
+  clear: both;
+  float: left;
+  width: 950px;
+}
+input.inactive {
+  color: #aaa;
+}
+
+#maincontent {
+  clear: both;
+  float: left;
+  width: 660px;
+  padding-right: 10px;
+}
+#maincontent.full,
+body.admin #maincontent {
+  width: 950px;
+  padding-right: 0;
+}
+#mymap #maincontent,
+#myaccount #maincontent {
+  clear: both;
+  width: 100%;
+}
+
+/*** Variable Width Button ****************************************************/
+
+.mmbutton,
+.mmbutton span {
+  background: transparent url("bg_button.gif") no-repeat 0 0;
+  display: block;
+  float: left;
+  height: 18px;
+  line-height: 18px;
+  border:0 none;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.mmbutton {
+  padding-left: 8px;
+  overflow: visible;
+}
+.mmbutton span {
+  background-position: 100% 0;
+  color: #033762;
+  font-size: 12px;
+  text-decoration: none;
+  position: relative;
+  padding-right: 12px;
+  right: -4px;
+}
+.mmbutton:hover {
+  background-position: 0 100%;
+  text-decoration: none;
+}
+.mmbutton:hover span {
+  background-position: 100% 100%;
+}
+.b-ff button.mmbutton span {
+  margin-right: 3px;
+  top: -1px;
+}
+.b-ie6 .mmbutton {
+  width: 0;
+}
+
+/*** Dialog Components *******************************************************/
+
+.overlay___invisible__ {
+  background-color: #666666;
+  filter:alpha(opacity=0);
+  -moz-opacity: 0;
+  opacity: 0;
+}
+.overlay_popup,
+.overlay_dialog {
+  background-color: #0a1d2a;
+  filter: alpha(opacity=60);
+  -moz-opacity: 0.6;
+  opacity: 0.6;
+}
+.overlay_content {
+  background-color: #001c2d;
+  filter: alpha(opacity=90);
+  -moz-opacity: 0.9;
+  opacity: 0.9;
+}
+
+.dialog {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  box-shadow: 0px 0px 10px #25292b;
+  -webkit-box-shadow: 0px 0px 10px #25292b;
+  -moz-box-shadow: 0px 0px 10px #25292b;
+  background-color: #fff;
+  position:absolute;
+  text-align:left;
+}
+.b-ie .dialog,
+.b-op .dialog {
+  border: 1px solid #25292b;
+}
+.dialog h1 {
+  display: none;
+}
+
+.dialog .dlg_header,
+.dialog .messages {
+  -moz-border-radius: 5px 5px 0 0;
+  -webkit-border-radius: 5px;
+  -webkit-border-bottom-left-radius: 0;
+  -webkit-border-bottom-right-radius: 0;
+}
+.dialog .dlg_header {
+  background-color: #b8e6f9;
+  border-bottom: 1px solid #8db1bf;
+  padding: 20px 25px 15px 25px;
+}
+.dialog .messages {
+  background-color: #e4e4e4;
+  border-bottom: 1px solid #bfbfbf;
+  color: #0b2933;
+  font-size:12px;
+  line-height:160%;
+  font-weight:bold;
+}
+.dialog .notice,
+.dialog .error {
+  background: transparent url("./images/warning.png") 25px 6px no-repeat;
+  padding: 6px 25px 4px 48px;
+}
+.dialog .dlg_content {
+  padding: 20px 25px;
+}
+.dialog .fancy .dlg_content {
+  padding-right: 150px;
+}
+.dialog .dlg_footer {
+  border-top: 1px solid #cccccc;
+  bottom:20px;
+  width: 100%;
+  position:absolute;
+}
+.dialog_content .para {
+  margin-bottom: 1em;
+}
+.dialog_content .radio {
+  margin-right: 3px;
+}
+.dialog_content .hint {
+  color: #a0a0a0;
+}
+.dialog_content .desc {
+  font-size:90%;
+}
+.dialog_content .sep {
+  border-bottom: 1px solid #fbfbfb;
+  border-top: 1px solid #cccccc;
+  margin:12px 0;
+}
+.dialog_content .label {
+  padding-right: 1em;
+}
+.dialog_content td {
+  line-height: 200%;
+}
+.dialog .buttons {
+  padding: 20px 25px;
+}
+.dialog h2 {
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.cssbutton,
+.dialog .button {
+  background: #ccd7db;
+  background: -moz-linear-gradient(-90deg,#ffffff,#d7d7d7);
+  background: -webkit-gradient(linear,center top,center bottom,from(#ffffff),to(#d7d7d7));
+  -webkit-border-radius:6px;
+  -moz-border-radius:6px;
+  -moz-box-sizing:content-box;
+  border: 1px solid #bbbbbb;
+  font-size: 13px;
+  text-decoration: none;
+  margin-right: 10px;
+  text-shadow:0 1px 0 #FFFFFF;
+  line-height:1.2em;
+  padding:4px 10px;
+  white-space:nowrap;
+}
+.cssbutton:hover,
+.dialog .button:hover {
+  text-decoration: none;
+  background: -moz-linear-gradient(-90deg,#ffffff,#909ead);
+  background: -webkit-gradient(linear,center top,center bottom,from(#ffffff),to(#909ead));
+}
+
+/*** Login Dialog Components *******************************************************/
+
+#customlogo {
+  margin-top:35px;
+  text-align: center;
+  height: 50px;
+}
+#signin {
+  position:relative;
+}
+#signin #logins {
+  padding:25px 20px 25px 20px;
+  height: 145px;
+}
+#signin .group {
+  height:70px;
+  clear: both;
+}
+#signin fieldset {
+  margin-bottom:8px;
+  border: 0 none;
+}
+#signin .forgot {
+  float: left;
+  font-size: 90%;
+  padding: 3px 0 0 10px;
+}
+#signin .postfix {
+  float: left;
+  padding: 3px 0 0 3px;
+}
+#signin .prefix {
+  text-align: right;
+  margin-right: 3px;
+  width: 107px;
+  padding-top: 3px;
+}
+#signin .hint {
+  font-size: 90%;
+  color: #aaa;
+}
+#signin .remember {
+  margin-left: 5px;
+  width: auto;
+  padding-top: 0;
+}
+#signin .switcher {
+  line-height: 30px;
+}
+#signin #dlg_footer li a {
+  padding-top: 4px;
+}
+#signin a {
+  color:#1DB2EF;
+  text-decoration:underline;
+}
+#signin .indent {
+  margin-left: 120px;
+  clear: both;
+}
+#signin label {
+  display:block;
+  float:left;
+  margin-right:10px;
+  padding-top:2px;
+  text-align:right;
+  width:110px;
+}
+#signin input {
+  background: #fff url("./images/bg_input.gif") repeat-x 0 0;
+  border: 1px solid #d2d2d2;
+  float:left;
+  font-size: 100%;
+  padding: 0.25em 0.3em;
+  width: 200px;
+}
+
+#signin form p.buttons {
+  margin: 5px 0 0 118px;
+  padding: 0;
+}
+
+.l-fr #signin input#password,
+.l-nl #signin input#password,
+.l-ja #signin input#password,
+.l-da #signin input#password {
+  width: 130px;
+}
+
+#signin .error {
+  color: #0b2933;
+  width:428px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  font-size:12px;
+  line-height:130%;
+  background:#e4e4e4 url("./images/warning.png") 17px 4px no-repeat;
+  padding: 5px 0 5px 42px;
+  font-weight:bold;
+}
+
+#signin .info {
+  color: #0b2933;
+  width:428px;
+  -moz-border-radius: 5px 5px 0px 0px;
+  -webkit-border-radius: 5px 5px 0px 0px;
+  font-size:12px;
+  line-height:130%;
+  padding: 5px 0 5px 10px;
+  font-weight:bold;
+}
+
+#signin .dlg_footer {
+  border-top:1px solid #8db1bf;
+  background-color:#b8e6f9;
+  -moz-border-radius: 0px 0px 5px 5px;
+  -webkit-border-radius: 5px;
+  -webkit-border-top-left-radius: 0;
+  -webkit-border-top-right-radius: 0;
+  padding: 10px 0;
+  bottom: -1px;
+}
+#signin .dlg_footer li {
+  color:#082f42;
+  font-size:12px;
+  float:left;
+  margin-right:20px;
+  list-style:none;
+}
+
+#signin .dlg_footer a:hover {
+  background-position:0 0;
+  color:#082F42;
+  opacity:1;
+}
+#signin .dlg_footer .text {
+  padding-left:25px;
+  width: 115px;
+  margin-right: 0;
+  color:#5c7176;
+}
+
+#signin .mmbutton,
+#signin .mmbutton span {
+  background: url("./images/bg_button_login.png") no-repeat 0 0;
+  display: block;
+  float: left;
+  line-height: 28px;
+  height: 28px;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 100%;
+  text-decoration:none;
+}
+#signin .mmbutton {
+  padding-left: 10px;
+  overflow: visible;
+  margin-right: 20px;
+}
+#signin .mmbutton span {
+  background-position: 100% 0;
+  position: relative;
+  padding: 0 18px 0 0;
+  right: -5px;
+  font-weight:bold;
+  font-size:14px;
+  color:#082f42;
+}
+#signin .mmbutton:hover {
+  background-position: 0 100%;
+}
+#signin .mmbutton:hover span {
+  background-position: 100% 100%;
+}
+#signin .nofloat {
+  float:none;
+}
+
+
+/*** Footer Components ********************************************************/
+
+#footer {
+  clear: both;
+  border-top: 3px solid #d9e9fa;
+  font-size: smaller;
+  text-align: left;
+  margin: 0 auto;
+  margin-top: 10px;
+  width: 950px;
+  float: left;
+
+}
+#footer p {
+  float: right;
+  font-size: 120%;
+  margin-bottom: 1em;
+}
+#footer li,
+#footer li a {
+  color: #022b46;
+  float: left;
+}
+#footer li a {
+  margin: 0 0.8em;
+  font-size: 120%;
+}
+#footer a:hover {
+  color: #ff09a3;
+}

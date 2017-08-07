@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:if="http://developer.bingosoft.net/schema/sso/condition"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd
+       http://developer.bingosoft.net/schema/sso/condition http://developer.bingosoft.net/schema/condition-1.0.xsd">
+	<!-- common -->
+	<bean if:test="runtime.random_code_enable=='true'" id="randomCodeValidator" class="bingo.sso.server.web.validate.RandomCodeValidator"
+			p:badAuthenticateCounter-ref="badAuthenticateCounter"
+			p:badAuthenticateCount="${runtime.bad_authenticate_count}"/>
+	<bean if:test="runtime.bad_authenticate_enable=='true' and runtime.ticket_mode=='mem'" id="badAuthenticateCounter" class="bingo.sso.core.login.MemBadAuthenticateCounter"
+		p:badAuthenticateCount="${runtime.bad_authenticate_count}"
+		p:badAuthenticateLockTime="${runtime.bad_authenticate_lock_times}"
+	/>
+	<bean if:test="runtime.bad_authenticate_enable=='true' and runtime.ticket_mode=='db'" id="badAuthenticateCounter" class="bingo.sso.core.login.DBBadAuthenticateCounter"
+		p:badAuthenticateCount="${runtime.bad_authenticate_count}"
+		p:badAuthenticateLockTime="${runtime.bad_authenticate_lock_times}"
+		p:dao-ref="dao"
+	/>
+
+
+    <!-- form -->
+    <bean id="loginFormCredentialsResolver" class="bingo.sso.core.authentication.form.LoginFormCredentialsResolver">
+    	<property if:test="runtime.bad_authenticate_enable=='true'" name="badAuthenticateCounter" ref="badAuthenticateCounter" />
+    	<property if:test="runtime.random_code_enable=='true'" name="randomCodeValidator" ref="randomCodeValidator" />
+    </bean>
+
+	<bean id="jdbcAuthenticationHandler" class="bingo.sso.core.authentication.form.JdbcAuthenticationHandler"
+		p:passwordEncoder-ref="messageDigestPasswordEncoder"  />
+	<if:condition test="runtime.password_encoder=='md5'">
+		<bean id="messageDigestPasswordEncoder"  class="bingo.sso.core.authentication.password.MessageDigestPasswordEncoder"/>
+	</if:condition>
+	<if:condition test="runtime.password_encoder=='md5_salt'">
+		<bean id="messageDigestPasswordEncoder"  class="bingo.sso.core.authentication.password.Md5WithSaltPasswordEncoder"
+    	  p:saltText="${runtime.password_encoder_salt_text}" />
+	</if:condition>
+
+	<!-- jwt -->
+    <bean id="jwtCredentialsResolver" class="bingo.sso.core.authentication.jwt.JwtCredentialsResolver">
+    </bean>
+	<bean id="jwtAuthenticationHandler" class="bingo.sso.core.authentication.jwt.JwtAuthenticationHandler" />
+
+    <!-- assertion -->
+    <bean id="assertionCredentialsResolver" class="bingo.sso.core.authentication.assertion.AssertionCredentialsResolver"/>
+    <bean id="assertionAuthenticationHandler" class="bingo.sso.core.authentication.assertion.AssertionAuthenticationHandler"/>
+
+    <!-- login ticket -->
+    <bean id="loginTicketCredentialsResolver" class="bingo.sso.core.authentication.loginticket.LoginTicketCredentialsResolver"/>
+    <bean id="loginTicketAuthenticationHandler" class="bingo.sso.core.authentication.loginticket.LoginTicketAuthenticationHandler"/>
+
+    <!-- AppSpecifiedSecret -->
+    <bean id="appSpecifiedSecretCredentialsResolver" class="bingo.sso.core.authentication.appspecifiedsecret.AppSpecifiedSecretCredentialsResolver">
+    	<property if:test="runtime.random_code_enable=='true'" name="randomCodeValidator" ref="randomCodeValidator" />
+    </bean>
+    <bean id="appSpecifiedSecretAuthenticationHandler" class="bingo.sso.core.authentication.appspecifiedsecret.AppSpecifiedSecretAuthenticationHandler"/>
+
+    <!-- ticketGrantingTicket -->
+    <bean id="ticketGrantingTicketCredentialsResolver" class="bingo.sso.core.authentication.ticketgrantingticket.TicketGrantingTicketCredentialsResolver"/>
+    <bean id="ticketGrantingTicketAuthenticationHandler" class="bingo.sso.core.authentication.ticketgrantingticket.TicketGrantingTicketAuthenticationHandler"/>
+
+    <!-- authorizationCode -->
+    <bean id="authorizationCodeCredentialsResolver" class="bingo.sso.core.authentication.authorizationcode.AuthorizationCodeCredentialsResolver"/>
+    <bean id="authorizationCodeAuthenticationHandler" class="bingo.sso.core.authentication.authorizationcode.AuthorizationCodeAuthenticationHandler"/>
+
+</beans>

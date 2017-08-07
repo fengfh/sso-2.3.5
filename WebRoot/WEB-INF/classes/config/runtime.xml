@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+	<entry key="runtime.deploy">default</entry>
+    <entry key="runtime.theme">default</entry>
+    <entry key="runtime.viewpath">/views/default</entry>
+    <entry key="runtime.logout_url">${runtime.viewpath}/logout.jsp</entry>
+	<entry key="runtime.user_mode">db</entry><!-- db\ad\ldap,当模式为ldap时，需配置下面的ldap信息 -->
+    <entry key="runtime.ticket_mode">db</entry><!-- db/mem -->
+	<entry key="runtime.is_ad_full_name">false</entry>
+	<entry key="runtime.default_auth_type">form</entry><!-- form\ntlm -->
+    <entry key="runtime.client_host_mode">mock</entry>
+    <!-- 启用域区分登录账户 -->
+    <entry key="runtime.use_domain">false</entry>
+    <entry key="runtime.field_domain">e_code</entry>
+    <!-- 是否启用登录错误控制 -->
+    <entry key="runtime.bad_authenticate_enable">true</entry>
+    <!-- 最大登录错误数 -->
+    <entry key="runtime.bad_authenticate_count">5</entry>
+    <!-- 帐号锁定时间 -->
+    <entry key="runtime.bad_authenticate_lock_times">20</entry>
+    <!-- 是否启用验证码的功能 -->
+    <entry key="runtime.random_code_enable">true</entry>
+    <entry key="runtime.login_log_enable">true</entry>
+    <entry key="runtime.spec_secret_enable">true</entry>
+    <entry key="runtime.desktop_password_enable">true</entry>
+    <!-- 是否验证返回Url,防钓鱼漏洞 -->
+    <entry key="runtime.validate_return_url">false</entry>
+    <entry key="runtime.sso_connect_enable">false</entry>
+
+    <!-- password encode -->
+    <entry key="runtime.password_encoder">md5</entry><!-- md5\md5_salt -->
+    <entry key="runtime.password_encoder_salt_text">md5_salt_some_text</entry>
+
+    <!-- token过期时间设置（单位： 毫秒）-->
+    <entry key="runtime.tgt_ticket_expires">36000000</entry><!--36000000 默认10小时 -->
+    <entry key="runtime.service_ticket_expires">600000</entry>
+    <entry key="runtime.login_ticket_expires">600000</entry>
+    <entry key="runtime.authorization_code_expires">600000</entry>
+
+    <!-- jsessionid -->
+    <entry key="runtime.jsession_id">jsessionid</entry>
+    <entry key="runtime.jsession_id_value_prefix"></entry>
+
+    <!-- Saml 协议证书信息，生成命令：keytool -genkey -v -alias localhost -keyalg RSA -keystore  localhost.jks -keypass password1 -storepass password1 -keysize 1024 -validity 1000   -->
+    <!-- 证书库地址，相对WEB-INF/classes目录 -->
+    <entry key="runtime.saml_keystore_path">/certs/localhost.jks</entry>
+    <entry key="runtime.saml_keystore_storepass">password1</entry>
+    <entry key="runtime.saml_keystore_cert_alias">localhost</entry>
+    <entry key="runtime.saml_keystore_cert_keypass">password1</entry>
+    <!-- Saml登录成功后，返回客户端的登录Id标识,{0}当前用户登录Id -->
+    <entry key="runtime.saml_identity_return_format">localhost\{0}</entry>
+    <!-- Saml登录成功后，返回角色来源字段,cn,sid,dname-->
+    <entry key="runtime.saml_role_return_field">cn</entry>
+    <!-- 返回ldap用户信息时，需配置ldap的管理员帐号及密码 -->
+    <entry key="ldap.admin.dn">fulsh@bingosoft.net</entry>
+    <entry key="ldap.admin.password">password</entry>
+
+	<!-- user_mode=ladp时配置 -->
+	<entry key="ldap.url">LDAP://GZ-DC-01.BINGOSOFT.LOCAL:389</entry>
+	<entry key="ldap.base">DC=bingosoft,DC=local</entry>
+	<entry key="ldap.domain">bingosoft</entry>
+	<entry key="ldap.suffix_name">bingosoft.net</entry>
+	<entry key="ldap.enable_domain">true</entry><!-- 启用bingosoft\fulsh格式的登录帐号 -->
+	<entry key="ldap.enable_suffix">true</entry><!-- 启用fulsh@bingosoft.net格式的登录帐号 -->
+	<entry key="ldap.enable_short_name">true</entry><!-- 启用fulsh格式的登录帐号 -->
+	<!-- 支持微信登录 -->
+	<entry key="runtime.weixin_login">false</entry>
+	<entry key="runtime.weixin_domain">false</entry>
+	<entry key="runtime.weixin_token_url">https://qyapi.weixin.qq.com/cgi-bin/gettoken</entry>
+	<entry key="runtime.weixin_code_url">https://open.weixin.qq.com/connect/oauth2/authorize</entry>
+	<entry key="runtime.weixin_userinfo_url">https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo</entry>
+	<entry key="runtime.weixin_default_agentid">0</entry>
+	<entry key="runtime.weixin_corp_id">wxcd1c7bf9d8398108</entry>
+	<entry key="runtime.weixin_secret">GdO84Y4E-T4wDtUwyLpCxPSjzdGc1TZ-B6S3QIhHuii3yN_vp54GSBumAW_kDF5-</entry>
+
+	<!-- 远程应用Token -->
+	<entry key="runtime.rm_enable">false</entry>
+	<entry key="runtime.rm_auth_url">http://10.201.51.104/auth.aspx?username={username}&amp;password={password}</entry>
+	<entry key="runtime.rm_expired_minutes">0</entry>
+</properties>

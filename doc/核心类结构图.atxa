@@ -1,0 +1,441 @@
+<,marco.yohn@gmail.com,marco.yohn@gmail.com> <http://www.architexa.com/rdf/core#creator> "true" .
+
+@prefix atxa-rse-eclipse: <http://www.architexa.com/rdf/rse-eclipse#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix atxa-jdt-wkspc: <http://www.architexa.com/rdf/jdt-wkspc#> .
+@prefix atxa-core: <http://www.architexa.com/rdf/core#> .
+@prefix atxa: <http://www.architexa.com/rdf/> .
+@prefix atxa-jdt: <http://www.architexa.com/rdf/jdt#> .
+
+<http://www.architexa.com/rdf/rse-eclipse#doc_sl核心类结构图.atxa> a atxa-core:reloFile .
+
+atxa:DetailNode atxa-core:detailLevel "2" .
+
+atxa-core:docRoot atxa-core:browseModel "com.architexa.diagrams.relo.jdt/com.architexa.diagrams.relo.jdt.browse.ClassStrucBrowseModel" ;
+	atxa-core:contains _:node1877l9b9ix8 .
+
+_:node1877l9b9ix8 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginController> ;
+	atxa-core:posX "419" ;
+	atxa-core:posY "105" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginController> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginController.login(ISingleSignOnContext,ILoginContext,)> .
+
+_:node1877l9b9ix9 a atxa-core:link ;
+	atxa-core:model atxa-jdt:inherits ;
+	rdf:subject _:node1877l9b9ix8 ;
+	rdf:object _:node1877l9b9ix2 ;
+	atxa-core:bendpoint _:node1877l1b8cx2998 .
+
+_:node1877l1b8cx2998 atxa-core:bpLocation "487,95" ;
+	atxa-core:bpIndex "0" .
+
+_:node1877l9b9ix8 atxa-core:contains _:node1877l9b9ix11 .
+
+_:node1877l9b9ix11 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginController.login(ISingleSignOnContext,ILoginContext,)> ;
+	atxa-core:posX "420" ;
+	atxa-core:posY "123" .
+
+_:node1877l9b9ix12 a atxa-core:link ;
+	atxa-core:model atxa-jdt:calls ;
+	rdf:subject _:node1877l9b9ix11 ;
+	rdf:object _:node1877l9b9ix13 .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix14 .
+
+_:node1877l9b9ix14 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginFlow> ;
+	atxa-core:posX "570" ;
+	atxa-core:posY "105" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginFlow> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginFlow.execute(ISingleSignOnContext,ILoginContext,)> .
+
+_:node1877l9b9ix14 atxa-core:contains _:node1877l9b9ix13 .
+
+_:node1877l9b9ix13 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginFlow.execute(ISingleSignOnContext,ILoginContext,)> ;
+	atxa-core:posX "571" ;
+	atxa-core:posY "123" .
+
+_:node1877l9b9ix15 a atxa-core:link ;
+	atxa-core:model atxa-jdt:calls ;
+	rdf:subject _:node1877l9b9ix13 ;
+	rdf:object _:node1877l9b9ix16 .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix17 .
+
+_:node1877l9b9ix17 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$LoginHandler> ;
+	atxa-core:posX "697" ;
+	atxa-core:posY "184" .
+
+_:node1877l9b9ix18 a atxa-core:link ;
+	atxa-core:model atxa-jdt:inherits ;
+	rdf:subject _:node1877l9b9ix17 ;
+	rdf:object _:node1877l9b9ix19 ;
+	atxa-core:bendpoint _:node1877l1b8cx2999 .
+
+_:node1877l1b8cx2999 atxa-core:bpLocation "759,160" ;
+	atxa-core:bpIndex "0" .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix21 .
+
+_:node1877l9b9ix21 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$CredentialsLoginHandler> ;
+	atxa-core:posX "530" ;
+	atxa-core:posY "300" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$CredentialsLoginHandler> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$CredentialsLoginHandler.handle(ISingleSignOnContext,ILoginContext,IFlow,)> .
+
+_:node1877l9b9ix22 a atxa-core:link ;
+	atxa-core:model atxa-jdt:inherits ;
+	rdf:subject _:node1877l9b9ix21 ;
+	rdf:object _:node1877l9b9ix17 ;
+	atxa-core:bendpoint _:node1877l1b8cx3000 .
+
+_:node1877l1b8cx3000 atxa-core:bpLocation "626,238" ;
+	atxa-core:bpIndex "0" .
+
+_:node1877l9b9ix22 atxa-core:bendpoint _:node1877l1b8cx3001 .
+
+_:node1877l1b8cx3001 atxa-core:bpLocation "759,238" ;
+	atxa-core:bpIndex "1" .
+
+_:node1877l9b9ix21 atxa-core:contains _:node1877l9b9ix25 .
+
+_:node1877l9b9ix25 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$CredentialsLoginHandler.handle(ISingleSignOnContext,ILoginContext,IFlow,)> ;
+	atxa-core:posX "531" ;
+	atxa-core:posY "318" .
+
+_:node1877l9b9ix26 a atxa-core:link ;
+	atxa-core:model atxa-jdt:calls ;
+	rdf:subject _:node1877l9b9ix25 ;
+	rdf:object _:node1877l9b9ix27 .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix28 .
+
+_:node1877l9b9ix28 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$AuthenticateLoginHandler> ;
+	atxa-core:posX "767" ;
+	atxa-core:posY "298" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$AuthenticateLoginHandler> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$AuthenticateLoginHandler.handle(ISingleSignOnContext,ILoginContext,IFlow,)> .
+
+_:node1877l9b9ix29 a atxa-core:link ;
+	atxa-core:model atxa-jdt:inherits ;
+	rdf:subject _:node1877l9b9ix28 ;
+	rdf:object _:node1877l9b9ix17 ;
+	atxa-core:bendpoint _:node1877l1b8cx3002 .
+
+_:node1877l1b8cx3002 atxa-core:bpLocation "868,238" ;
+	atxa-core:bpIndex "0" .
+
+_:node1877l9b9ix29 atxa-core:bendpoint _:node1877l1b8cx3003 .
+
+_:node1877l1b8cx3003 atxa-core:bpLocation "759,238" ;
+	atxa-core:bpIndex "1" .
+
+_:node1877l9b9ix32 a atxa-core:link ;
+	atxa-core:model atxa-jdt:refType ;
+	rdf:subject _:node1877l9b9ix28 ;
+	rdf:object _:node1877l9b9ix33 .
+
+_:node1877l9b9ix28 atxa-core:contains _:node1877l9b9ix34 .
+
+_:node1877l9b9ix34 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.login$AuthenticateLoginHandler.handle(ISingleSignOnContext,ILoginContext,IFlow,)> ;
+	atxa-core:posX "768" ;
+	atxa-core:posY "316" .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix59 .
+
+_:node1877l9b9ix59 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.servlet$SingleSignOnServlet> ;
+	atxa-core:posX "0" ;
+	atxa-core:posY "15" .
+
+_:node1877l9b9ix60 a atxa-core:link ;
+	atxa-core:model atxa-jdt:refType ;
+	rdf:subject _:node1877l9b9ix59 ;
+	rdf:object _:node1877l9b9ix61 .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix62 .
+
+_:node1877l9b9ix62 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.servlet$ServerSignOnServlet> ;
+	atxa-core:posX "1" ;
+	atxa-core:posY "134" .
+
+_:node1877l9b9ix63 a atxa-core:link ;
+	atxa-core:model atxa-jdt:refType ;
+	rdf:subject _:node1877l9b9ix62 ;
+	rdf:object _:node1877l9b9ix61 .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix64 .
+
+_:node1877l9b9ix64 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api$ISingleSignOnManager> ;
+	atxa-core:posX "200" ;
+	atxa-core:posY "217" .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix61 .
+
+_:node1877l9b9ix61 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api$ISingleSignOnController> ;
+	atxa-core:posX "196" ;
+	atxa-core:posY "17" .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix65 .
+
+_:node1877l9b9ix65 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core$SingleSignOnController> ;
+	atxa-core:posX "198" ;
+	atxa-core:posY "117" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core$SingleSignOnController> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core$SingleSignOnController.login(HttpServletRequest,HttpServletResponse,ILoginContextFactory,)> , <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core$SingleSignOnController.logout(ISingleSignOnContext,ILogoutContext,)> .
+
+_:node1877l9b9ix66 a atxa-core:link ;
+	atxa-core:model atxa-jdt:inherits ;
+	rdf:subject _:node1877l9b9ix65 ;
+	rdf:object _:node1877l9b9ix61 ;
+	atxa-core:bendpoint _:node1877l1b8cx3004 .
+
+_:node1877l1b8cx3004 atxa-core:bpLocation "290,71" ;
+	atxa-core:bpIndex "0" .
+
+_:node1877l9b9ix68 a atxa-core:link ;
+	atxa-core:model atxa-jdt:refType ;
+	rdf:subject _:node1877l9b9ix65 ;
+	rdf:object _:node1877l9b9ix64 .
+
+_:node1877l9b9ix65 atxa-core:contains _:node1877l9b9ix69 .
+
+_:node1877l9b9ix69 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core$SingleSignOnController.login(HttpServletRequest,HttpServletResponse,ILoginContextFactory,)> ;
+	atxa-core:posX "199" ;
+	atxa-core:posY "135" .
+
+_:node1877l9b9ix70 a atxa-core:link ;
+	atxa-core:model atxa-jdt:calls ;
+	rdf:subject _:node1877l9b9ix69 ;
+	rdf:object _:node1877l9b9ix3 .
+
+_:node1877l9b9ix65 atxa-core:contains _:node1877l9b9ix71 .
+
+_:node1877l9b9ix71 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core$SingleSignOnController.logout(ISingleSignOnContext,ILogoutContext,)> ;
+	atxa-core:posX "199" ;
+	atxa-core:posY "151" .
+
+_:node1877l9b9ix72 a atxa-core:link ;
+	atxa-core:model atxa-jdt:calls ;
+	rdf:subject _:node1877l9b9ix71 ;
+	rdf:object _:node1877l9b9ix6 .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix73 .
+
+_:node1877l9b9ix73 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core$SingleSignOnManager> ;
+	atxa-core:posX "202" ;
+	atxa-core:posY "311" .
+
+_:node1877l9b9ix74 a atxa-core:link ;
+	atxa-core:model atxa-jdt:inherits ;
+	rdf:subject _:node1877l9b9ix73 ;
+	rdf:object _:node1877l9b9ix64 ;
+	atxa-core:bendpoint _:node1877l1b8cx3005 .
+
+_:node1877l1b8cx3005 atxa-core:bpLocation "290,271" ;
+	atxa-core:bpIndex "0" .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix2 .
+
+_:node1877l9b9ix2 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login$ILoginController> ;
+	atxa-core:posX "417" ;
+	atxa-core:posY "40" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login$ILoginController> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login$ILoginController.login(ISingleSignOnContext,ILoginContext,)> .
+
+_:node1877l9b9ix2 atxa-core:contains _:node1877l9b9ix3 .
+
+_:node1877l9b9ix3 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login$ILoginController.login(ISingleSignOnContext,ILoginContext,)> ;
+	atxa-core:posX "418" ;
+	atxa-core:posY "58" .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix5 .
+
+_:node1877l9b9ix5 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout$ILogoutController> ;
+	atxa-core:posX "417" ;
+	atxa-core:posY "166" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout$ILogoutController> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout$ILogoutController.logout(ISingleSignOnContext,ILogoutContext,)> .
+
+_:node1877l9b9ix5 atxa-core:contains _:node1877l9b9ix6 .
+
+_:node1877l9b9ix6 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.logout$ILogoutController.logout(ISingleSignOnContext,ILogoutContext,)> ;
+	atxa-core:posX "418" ;
+	atxa-core:posY "184" .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix36 .
+
+_:node1877l9b9ix36 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.logout$LogoutController> ;
+	atxa-core:posX "419" ;
+	atxa-core:posY "233" .
+
+_:node1877l9b9ix37 a atxa-core:link ;
+	atxa-core:model atxa-jdt:inherits ;
+	rdf:subject _:node1877l9b9ix36 ;
+	rdf:object _:node1877l9b9ix5 ;
+	atxa-core:bendpoint _:node1877l1b8cx3006 .
+
+_:node1877l1b8cx3006 atxa-core:bpLocation "492,221" ;
+	atxa-core:bpIndex "0" .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix19 .
+
+_:node1877l9b9ix19 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.handlers$ILoginHandler> ;
+	atxa-core:posX "695" ;
+	atxa-core:posY "105" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.handlers$ILoginHandler> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.handlers$ILoginHandler.handle(ISingleSignOnContext,ILoginContext,IFlow,)> .
+
+_:node1877l9b9ix19 atxa-core:contains _:node1877l9b9ix16 .
+
+_:node1877l9b9ix16 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.login.handlers$ILoginHandler.handle(ISingleSignOnContext,ILoginContext,IFlow,)> ;
+	atxa-core:posX "696" ;
+	atxa-core:posY "123" .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix46 .
+
+_:node1877l9b9ix46 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication$CredentialsManager> ;
+	atxa-core:posX "638" ;
+	atxa-core:posY "433" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication$CredentialsManager> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication$CredentialsManager.resolve(ISingleSignOnContext,)> .
+
+_:node1877l9b9ix46 atxa-core:contains _:node1877l9b9ix47 .
+
+_:node1877l9b9ix47 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication$CredentialsManager.resolve(ISingleSignOnContext,)> ;
+	atxa-core:posX "639" ;
+	atxa-core:posY "451" .
+
+_:node1877l9b9ix48 a atxa-core:link ;
+	atxa-core:model atxa-jdt:overrides ;
+	rdf:subject _:node1877l9b9ix47 ;
+	rdf:object _:node1877l9b9ix27 ;
+	atxa-core:bendpoint _:node1877l1b8cx3007 .
+
+_:node1877l1b8cx3007 atxa-core:bpLocation "717,407" ;
+	atxa-core:bpIndex "0" .
+
+_:node1877l9b9ix50 a atxa-core:link ;
+	atxa-core:model atxa-jdt:calls ;
+	rdf:subject _:node1877l9b9ix47 ;
+	rdf:object _:node1877l9b9ix44 .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix51 .
+
+_:node1877l9b9ix51 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication$AuthenticationManager> ;
+	atxa-core:posX "837" ;
+	atxa-core:posY "430" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication$AuthenticationManager> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication$AuthenticationManager.authenticate(Credentials,)> .
+
+_:node1877l9b9ix52 a atxa-core:link ;
+	atxa-core:model atxa-jdt:inherits ;
+	rdf:subject _:node1877l9b9ix51 ;
+	rdf:object _:node1877l9b9ix33 ;
+	atxa-core:bendpoint _:node1877l1b8cx3008 .
+
+_:node1877l1b8cx3008 atxa-core:bpLocation "930,413" ;
+	atxa-core:bpIndex "0" .
+
+_:node1877l9b9ix51 atxa-core:contains _:node1877l9b9ix54 .
+
+_:node1877l9b9ix54 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.core.authentication$AuthenticationManager.authenticate(Credentials,)> ;
+	atxa-core:posX "838" ;
+	atxa-core:posY "448" .
+
+_:node1877l9b9ix55 a atxa-core:link ;
+	atxa-core:model atxa-jdt:calls ;
+	rdf:subject _:node1877l9b9ix54 ;
+	rdf:object _:node1877l9b9ix56 .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix41 .
+
+_:node1877l9b9ix41 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication$ICredentialsManager> ;
+	atxa-core:posX "636" ;
+	atxa-core:posY "358" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication$ICredentialsManager> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication$ICredentialsManager.resolve(ISingleSignOnContext,)> .
+
+_:node1877l9b9ix41 atxa-core:contains _:node1877l9b9ix27 .
+
+_:node1877l9b9ix27 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication$ICredentialsManager.resolve(ISingleSignOnContext,)> ;
+	atxa-core:posX "637" ;
+	atxa-core:posY "376" .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix33 .
+
+_:node1877l9b9ix33 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication$IAuthenticationManager> ;
+	atxa-core:posX "835" ;
+	atxa-core:posY "359" .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix43 .
+
+_:node1877l9b9ix43 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.principal$CredentialsResolver> ;
+	atxa-core:posX "745" ;
+	atxa-core:posY "495" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.principal$CredentialsResolver> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.principal$CredentialsResolver.resolve(ISingleSignOnContext,)> .
+
+_:node1877l9b9ix43 atxa-core:contains _:node1877l9b9ix44 .
+
+_:node1877l9b9ix44 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.principal$CredentialsResolver.resolve(ISingleSignOnContext,)> ;
+	atxa-core:posX "746" ;
+	atxa-core:posY "513" .
+
+atxa-core:docRoot atxa-core:contains _:node1877l9b9ix58 .
+
+_:node1877l9b9ix58 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.handler$AuthenticationHandler> ;
+	atxa-core:posX "971" ;
+	atxa-core:posY "493" .
+
+<http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.handler$AuthenticationHandler> atxa-core:contains <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.handler$AuthenticationHandler.authenticate(Credentials,)> .
+
+_:node1877l9b9ix58 atxa-core:contains _:node1877l9b9ix56 .
+
+_:node1877l9b9ix56 a atxa-core:node ;
+	atxa-core:model <http://www.architexa.com/rdf/jdt-wkspc#bingo.sso.api.authentication.handler$AuthenticationHandler.authenticate(Credentials,)> ;
+	atxa-core:posX "972" ;
+	atxa-core:posY "511" .
+
+@prefix atxa-rse-eclipse: <http://www.architexa.com/rdf/rse-eclipse#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix atxa-jdt-wkspc: <http://www.architexa.com/rdf/jdt-wkspc#> .
+@prefix atxa-core: <http://www.architexa.com/rdf/core#> .
+@prefix atxa: <http://www.architexa.com/rdf/> .
+@prefix atxa-jdt: <http://www.architexa.com/rdf/jdt#> .
+
+<http://www.architexa.com/rdf/rse-eclipse#doc_sl核心类结构图.atxa> a atxa-core:reloFile ;
+	atxa-core:contains _:node1877l9b9ix11 , _:node1877l9b9ix8 , _:node1877l9b9ix13 , _:node1877l9b9ix14 , _:node1877l9b9ix17 , _:node1877l9b9ix25 , _:node1877l9b9ix21 , _:node1877l9b9ix34 , _:node1877l9b9ix28 , _:node1877l9b9ix59 , _:node1877l9b9ix62 , _:node1877l9b9ix64 , _:node1877l9b9ix61 , _:node1877l9b9ix69 , _:node1877l9b9ix71 , _:node1877l9b9ix65 , _:node1877l9b9ix73 , _:node1877l9b9ix3 , _:node1877l9b9ix2 , _:node1877l9b9ix6 , _:node1877l9b9ix5 , _:node1877l9b9ix36 , _:node1877l9b9ix16 , _:node1877l9b9ix19 , _:node1877l9b9ix47 , _:node1877l9b9ix46 , _:node1877l9b9ix54 , _:node1877l9b9ix51 , _:node1877l9b9ix27 , _:node1877l9b9ix41 , _:node1877l9b9ix33 , _:node1877l9b9ix44 , _:node1877l9b9ix43 , _:node1877l9b9ix56 , _:node1877l9b9ix58 , atxa-core:docRoot , _:node1877l9b9ix11 , _:node1877l9b9ix8 , _:node1877l9b9ix13 , _:node1877l9b9ix14 , _:node1877l9b9ix17 , _:node1877l9b9ix25 , _:node1877l9b9ix21 , _:node1877l9b9ix34 , _:node1877l9b9ix28 , _:node1877l9b9ix59 , _:node1877l9b9ix62 , _:node1877l9b9ix64 , _:node1877l9b9ix61 , _:node1877l9b9ix69 , _:node1877l9b9ix71 , _:node1877l9b9ix65 , _:node1877l9b9ix73 , _:node1877l9b9ix3 , _:node1877l9b9ix2 , _:node1877l9b9ix6 , _:node1877l9b9ix5 , _:node1877l9b9ix36 , _:node1877l9b9ix16 , _:node1877l9b9ix19 , _:node1877l9b9ix47 , _:node1877l9b9ix46 , _:node1877l9b9ix54 , _:node1877l9b9ix51 , _:node1877l9b9ix27 , _:node1877l9b9ix41 , _:node1877l9b9ix33 , _:node1877l9b9ix44 , _:node1877l9b9ix43 , _:node1877l9b9ix56 , _:node1877l9b9ix58 , atxa-core:docRoot , _:node1877l9b9ix9 , _:node1877l9b9ix12 , _:node1877l9b9ix15 , _:node1877l9b9ix18 , _:node1877l9b9ix22 , _:node1877l9b9ix26 , _:node1877l9b9ix29 , _:node1877l9b9ix32 , _:node1877l9b9ix60 , _:node1877l9b9ix63 , _:node1877l9b9ix66 , _:node1877l9b9ix68 , _:node1877l9b9ix70 , _:node1877l9b9ix72 , _:node1877l9b9ix74 , _:node1877l9b9ix37 , _:node1877l9b9ix48 , _:node1877l9b9ix50 , _:node1877l9b9ix52 , _:node1877l9b9ix55 , _:node1877l9b9ix9 , _:node1877l9b9ix12 , _:node1877l9b9ix15 , _:node1877l9b9ix18 , _:node1877l9b9ix22 , _:node1877l9b9ix26 , _:node1877l9b9ix29 , _:node1877l9b9ix32 , _:node1877l9b9ix60 , _:node1877l9b9ix63 , _:node1877l9b9ix66 , _:node1877l9b9ix68 , _:node1877l9b9ix70 , _:node1877l9b9ix72 , _:node1877l9b9ix74 , _:node1877l9b9ix37 , _:node1877l9b9ix48 , _:node1877l9b9ix50 , _:node1877l9b9ix52 , _:node1877l9b9ix55 .
+

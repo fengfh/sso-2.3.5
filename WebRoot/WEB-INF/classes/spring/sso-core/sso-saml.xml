@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.0.xsd">
+	<!--
+	<bean id="samlBootstraper" class="bingo.sso.saml.SamlBootstraper" />
+
+    <bean id="samlServerManager" class="bingo.sso.saml.SamlServerManager"
+    	  p:clientHostAccesser-ref="clientHostAccesser"
+    	  p:singleSignOnController-ref="singleSignOnController"
+    	  p:samlMessageBuilder-ref="saml1MessageBuilder"
+    	  p:samlPostViewPath="/login.saml.post.jsp"
+    	  p:samlIdentityFormat="${runtime.saml_identity_return_format}"
+    	  p:samlRoleField="${runtime.saml_role_return_field}"
+    	  />
+
+	<bean id="signatureKeyProvider" class="bingo.sso.saml.idp.JavaKeyStoreSignatureKeyProvider"
+		  p:keyStorePath="${runtime.saml_keystore_path}"
+		  p:storePasswd="${runtime.saml_keystore_storepass}"
+		  p:alias="${runtime.saml_keystore_cert_alias}"
+    	  p:keyPasswd="${runtime.saml_keystore_cert_keypass}"
+    	  />
+
+    <bean id="samlLdapContextSource" class="org.springframework.ldap.core.support.LdapContextSource">
+		<property name="url" value="${ldap.url}" />
+		<property name="base" value="${ldap.base}" />
+		<property name="userDn" value="${ldap.admin.dn}" />
+    	<property name="password" value="${ldap.admin.password}" />
+    	<property name="referral" value="follow"></property>
+    	<property name="baseEnvironmentProperties">
+            <map>
+	            <entry key="java.naming.ldap.attributes.binary">
+	                <value>objectSid</value>
+	            </entry>
+            </map>
+        </property>
+	</bean>
+
+	<bean id="samlLdapTemplate" class="org.springframework.ldap.core.LdapTemplate">
+    	<constructor-arg ref="samlLdapContextSource" />
+	</bean>
+
+	<bean id="ldapUserService" class="bingo.sso.saml.ldap.LdapUserService">
+    	<property name="ldapTemplate" ref="samlLdapTemplate"/>
+	</bean>
+
+	<bean id="ldapUserClaimAttributeBuilder" class="bingo.sso.saml.ldap.LdapUserClaimAttributeBuilder">
+		<property name="ldapUserService" ref="ldapUserService"/>
+	</bean>
+
+	<bean id="saml1MessageBuilder" class="bingo.sso.saml1.impl.SamlMessageBuilder"
+    	p:signatureKeyProvider-ref="signatureKeyProvider"
+    	p:userClaimsAttributeBuilder-ref="ldapUserClaimAttributeBuilder"
+    /> -->
+
+</beans>
